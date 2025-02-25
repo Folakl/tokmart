@@ -10,7 +10,7 @@ const ShoppingWebsite = () => {
        <Navbar/>
         
         <SecondNavbar/>
-        <h3 className='font-bold text-[50px] mx-10 mt-5'>NEW ARRIVALS</h3>
+        <h3 className='font-bold text-[30px] mx-10 mt-5'>NEW ARRIVALS</h3>
         <NewArrivals/>
         <Footertwo/>
     </div>
