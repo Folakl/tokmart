@@ -9,7 +9,7 @@ const Payday = () => {
           <img src={one} className='w-[650px] h-[300px]' alt="" />
         </div>
         <div className='p-[50px]'>
-          <h3 className='bg-white text-black text-[40px] px-10 font-bold'>PAYDAY</h3>
+          <h3 className='bg-white text-black text-[40px] mx-10 px-10 font-bold'>PAYDAY</h3>
           <h3 className='text-[40px] font-bold'> SALE NOW</h3>
           <h3>Spend minimal $100 get 30% off voucher  code for your next purchase</h3>
           <h3 className='font-bold my-3'>1 June - 10 June 2021</h3>
