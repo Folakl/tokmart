@@ -86,12 +86,12 @@ const CartProvider = ({ children }) => {  // Fix: Lowercase "children"
             if (existingItem) {
                 return prevCart.map((item) =>
                     item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-                    // alert(" `${item.Name}` already added to cart,if you wish to add more quantity,update in cart")
+                   
                 )
 
             } else {
                 return [...prevCart, { ...product, quantity: 1 }]
-                // alert("item suceesfully added to cart");
+             
             }
         });
     };
