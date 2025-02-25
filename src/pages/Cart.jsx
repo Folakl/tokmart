@@ -30,7 +30,7 @@ const Cart = () => {
                         <h3 className='lg:text-[30px] md:text-[30px] text-[20px]'>{item.Name}</h3>
                         <div className='flex '>
                         <h3 className='text-[20px]'>price: <span className='font-bold'>${item.price}</span></h3>
-                        <img src={deleteicon}   onClick={() => removeFromCart(item.id)} alt="" className=' lg:w-[50px] lg:h-[50px]  md:w-[50px] md:h-[50px] w-[40px] h-[40px] ml-10 lg:ml-20 md:ml-10' /></div> 
+                        <img src={deleteicon}   onClick={() => removeFromCart(item.id)} alt="" className=' lg:w-[50px] lg:h-[50px]  md:w-[50px] md:h-[50px] w-[40px] h-[40px] ml-5 lg:ml-20 md:ml-10' /></div> 
                          <div >
                          <h3 >Add more quantity: </h3>
                          <div className='flex gap-2 my-3'>
