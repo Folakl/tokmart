@@ -17,7 +17,7 @@ const Nave = () => {
     <div>
       <nav className='flex justify-between fixed bg-[grey] w-full  '>
         <div className='flex gap-2  m-2'>
-            <img src={one} alt="" className='w-[40px] h-[40px]' />
+            <img src={one} alt="" className='w-[30px] h-[40px]' />
             <img src={two} alt="" className='w-[100px] h-[40px]' />
         </div>
         <div className='flex-wrap gap-10  font-bold lg:flex md:flex hidden'>

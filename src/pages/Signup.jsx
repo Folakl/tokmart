@@ -3,7 +3,7 @@ import React from 'react';
 const Signup = () => {
   return (
     <div className="flex justify-center ">
-      <div className="lg:w-[500px] lg:h-[500px] md:w-[500px] md:h-[500px]  w-[400px] h-[800px] bg-black rounded-md text-white  mx-10">
+      <div className="w-[500px] h-[500px] bg-black rounded-md text-white  mx-10">
         <h3 className="mt-5 text-[30px] text-center">Login</h3>
         <div className="mx-[150px]">
           <h3 className="my-3">Name</h3>
