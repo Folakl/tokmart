@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../Components/CartContext';
 import { Link } from 'react-router-dom';
-import Products from '../Components/Product';
+import Nave from '../Components/Nav';
 import deleteicon from '../assets/Delete Icon.jpeg'
 
 
@@ -14,9 +14,10 @@ const Cart = () => {
 
     return (
     <div>
+        <Nave/>
         <div className='flex gap-5 mx-5 justify-end my-2'>
         <Link to='/shoppingcenter'> <button className='w-[150px] h-[40px] text-white font-bold bg-black'>Home</button></Link>
-        <button className='w-[150px] h-[40px] text-white font-bold bg-[grey]'>Check out</button>
+        <button className='w-[150px] h-[40px] text-white font-bold bg-[#777171]'>Check out</button>
         </div>
         <h3 className='flex justify-center font-bold text-[30px] my-5'>Your cart</h3>
 
