@@ -20,25 +20,25 @@ const Footertwo = () => {
       </div>
 
       <div>
-        <h3 className='font-bold py-5'>Company</h3>
+        <h3 className='font-bold py-3'>Company</h3>
         <h3 className='py-5'>About</h3>
         <h3 className='py-5'>Contact us</h3>
         <h3 className='py-5'>Support</h3>
         <h3 className='py-5'>Careers</h3>
       </div>
       <div>
-        <h3 className='font-bold py-5'>Quick Link</h3>
-        <h3  className='py-5'>Share Location</h3>
-        <h3 className='py-5'>Orders Tracking</h3>
-        <h3 className='py-5'>Size Guide</h3>
-        <h3 className='py-5'>FAQs</h3>
+        <h3 className='font-bold py-3'>Quick Link</h3>
+        <h3  className='py-3'>Share Location</h3>
+        <h3 className='py-3'>Orders Tracking</h3>
+        <h3 className='py-3'>Size Guide</h3>
+        <h3 className='py-3'>FAQs</h3>
       </div>
       <div>
-        <h3 className='font-bold py-5'>Legal</h3>
-        <h3  className='py-5'>Terms & conditions</h3>
-        <h3 className='py-5'>Privacy Policy</h3>
-        <h3 className='py-5'>Terms & conditions</h3>
-        <h3 className='py-5'>Privacy Policy</h3>
+        <h3 className='font-bold py-3'>Legal</h3>
+        <h3  className='py-3'>Terms & conditions</h3>
+        <h3 className='py-3'>Privacy Policy</h3>
+        <h3 className='py-3'>Terms & conditions</h3>
+        <h3 className='py-3'>Privacy Policy</h3>
       </div>
     </div>
     </div>

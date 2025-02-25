@@ -49,7 +49,7 @@ const NewArrivals = () => {
             </div>
             <div>
                 <img src={three} className='w-[350px] h-[400px] rounded-md' alt="" />
-                <h3 className='font-bold py-2'>Tees $ T-shirt</h3>
+                <h3 className='font-bold py-2'>Tees & T-shirt</h3>
                 <div className='flex'>
                     <h3 className=''>Explore now </h3>
                     <Link to='/tees'><img src={four} alt="" className='ml-[200px] mt-2 pb-5' /></Link>
