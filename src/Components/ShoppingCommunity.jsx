@@ -7,9 +7,9 @@ const ShoppingCommunity = () => {
         <h3>Type your email down below and be young wild generation</h3>
 
         <div className='flex justify-center'>
-        <h3 className='bg-white lg:w-[400px] md:w-[400px] w-[350px] h-[60px] mt-5  mx-5 rounded-2xl flex justify-center'>
+        <h3 className='bg-white lg:w-[400px] md:w-[400px] w-[350px] h-[60px] mt-5  mx-5 rounded-2xl flex'>
             <h3 className='text-black p-5'>Add your email here</h3>
-            <button className='bg-black w-[120px] h-[45px] my-2 lg:ml-20 md:ml-10 ml-5 text-white'>SEND</button>
+            <button className='bg-black w-[120px] h-[45px] my-2 lg:ml-20 md:ml-10  text-white'>SEND</button>
         </h3>
         </div>
       

@@ -6,7 +6,7 @@ const Payday = () => {
     <div>
       <div className='bg-[#fee973] grid lg:grid-cols-2 md:grid-cols-2  grid-cols-1  '>
         <div>
-          <img src={one} className='w-[650px] h-[600px]' alt="" />
+          <img src={one} className='w-[650px] h-[300px]' alt="" />
         </div>
         <div className='p-20'>
           <h3 className='bg-white text-black text-[40px] px-5 font-bold'>PAYDAY</h3>

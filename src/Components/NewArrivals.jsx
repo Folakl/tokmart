@@ -36,7 +36,7 @@ const NewArrivals = () => {
                 <h3 className='font-bold py-2'>Hoodies & Sweatshirt</h3>
                 <div className='flex'>
                     <h3 className=''>Explore now </h3>
-                    <Link to='/hoodies'><img src={four} alt="" className='ml-[220px] mt-2 pb-3' /></Link>
+                    <Link to='/hoodies'><img src={four} alt="" className='ml-[200px] mt-2 pb-3' /></Link>
                 </div>
             </div>
             <div>
@@ -44,7 +44,7 @@ const NewArrivals = () => {
                 <h3 className='font-bold py-2'>Coats & Parkas</h3>
                 <div className='flex'>
                     <h3 className=''>Explore now </h3>
-                    <Link to='/coats'><img src={four} alt="" className='ml-[220px] mt-2 pb-3' /></Link>
+                    <Link to='/coats'><img src={four} alt="" className='ml-[200px] mt-2 pb-3' /></Link>
                 </div>
             </div>
             <div>
@@ -52,7 +52,7 @@ const NewArrivals = () => {
                 <h3 className='font-bold py-2'>Tees $ T-shirt</h3>
                 <div className='flex'>
                     <h3 className=''>Explore now </h3>
-                    <Link to='/tees'><img src={four} alt="" className='ml-[220px] mt-2 pb-3' /></Link>
+                    <Link to='/tees'><img src={four} alt="" className='ml-[200px] mt-2 pb-5' /></Link>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ import inimg from '../assets/in (1).png'
 const Footertwo = () => {
   return (
     <div className='mt-10'>
-      <div className='bg-black p-10 text-white grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 gap-20  '>
+      <div className='bg-black p-10 text-white grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 lg:gap-20 md:gap-10  gap-5  '>
       <div>
         <h3 className='font-bold py-5'>FASHION</h3> 
        <h3>Complete your style with awesome clothes from us.</h3>

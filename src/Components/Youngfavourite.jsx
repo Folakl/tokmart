@@ -15,7 +15,7 @@ const Youngfavourite= () => {
        <div className=' grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mx-5'>
         <div>
           <img src={one} alt=""  className='w-[350px] h-[300px]' />
-          <div className='flex gap-[50px] mt-5 '>
+          <div className='flex gap-[150px] mt-5 '>
          <div>
          <h3 className='font-bold'>Trending on instagram</h3>
          <h3>Buy Now!</h3>
@@ -27,7 +27,7 @@ const Youngfavourite= () => {
         </div>
         <div>
           <img src={five} alt=""  className='w-[350px] h-[300px]' />
-          <div className='flex gap-[150px] mt-5 '>
+          <div className='flex gap-[250px] mt-5 '>
          <div>
          <h3 className='font-bold'>Coats</h3>
          <h3>Buy Now!</h3>
@@ -39,7 +39,7 @@ const Youngfavourite= () => {
         </div>
         <div>
           <img src={four} alt=""  className='w-[350px] h-[300px]' />
-          <div className='flex gap-[150px]  mt-5 '>
+          <div className='flex gap-[250px]  mt-5 '>
          <div>
          <h3 className='font-bold'>Lifestyle</h3>
          <h3>Buy Now!</h3>
@@ -51,12 +51,12 @@ const Youngfavourite= () => {
         </div>
         <div>
           <img src={two} alt=""  className='w-[350px] h-[300px]' />
-          <div className='flex gap-[150px]  mt-5 '>
+          <div className='flex gap-[250px]  mt-5 '>
          <div>
          <h3 className='font-bold'>Fashion</h3>
          <h3>Buy Now!</h3>
          </div>
-         <div className='mt-4'>
+         <div className='mt-4 '>
          <Link to="/fashion"> <img src={three} alt="" /></Link>
          </div>
           </div>
