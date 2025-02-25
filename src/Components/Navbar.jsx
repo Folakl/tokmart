@@ -36,7 +36,7 @@ const Navbar = () => {
     <div className='bg-white rounded-md h-[630px]'>
       {/* Navbar section */}
       <nav className='flex justify-between fixed bg-[grey] w-full px-2'>
-        <div className='flex gap-2 m-3'>
+        <div className='flex gap-2 mt-5'>
           <img src={one} alt="" className='w-[40px] h-[40px]' />
           <h3 className='text-[20px] font-bold mt-3'>TOKMART</h3>
         </div>
