@@ -30,7 +30,7 @@ const Fashion = () => {
                 {filterbyCategory.map(product => (
                     <div key={product.id}>
                         <img src={product.img} alt="" className='rounded-2xl w-[250px] h-[200px] lg:w-[350px] lg:h-[300px] md:h-[300px] md:w-[350px] ' />
-                        <h3 className='pt-5 text-[30px]'>{product.Name}</h3>
+                        <h3 className='pt-5 text-[20px]'>{product.Name}</h3>
                         <div>
                             <h3 className='text-[20px]'>Price: <span className='font-bold'>${product.price}</span></h3>
                                 <div className='flex'>
