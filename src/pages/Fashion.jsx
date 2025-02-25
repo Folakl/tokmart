@@ -1,4 +1,4 @@
-import Navbar from '../Components/Navbar';
+import Nave from '../Components/Nav';
 import { useContext } from 'react';
 import { CartContext } from '../Components/CartContext';
 import Products from '../Components/Product'; // Fix: Import Products list
@@ -22,7 +22,7 @@ const Fashion = () => {
 
     return (
         <div>
-            <Navbar />
+            <Nave />
             <h3 className='flex justify-center font-bold text-[30px] bg-gradient-to-r from-blue-950 to-purple-400 text-transparent bg-clip-text'>
                 New <span className='bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text'>Trends</span>
             </h3>
