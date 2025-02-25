@@ -47,21 +47,22 @@ const Navbar = () => {
           <Link to='/lifestyle'><h3 className='mt-5 cursor-pointer'>LIFESTYLE</h3></Link>
           <Link to='/signup'><button className='w-[120px] mt-3 text-white h-[40px] rounded-md bg-black'>SIGN UP</button></Link>
         </div>
-        <div className='lg:hidden md:hidden flex'>
-          <select 
-            name="categories"
-            onChange={handleSelectChange}
-            className='w-[100px] h-[40px] mt-5 mr-2'>
-            <option value="">Select Category</option>
-            <option value="fashion">Fashion</option>
-            <option value="lifestyle">Lifestyle</option>
-            <option value="tees">Tees</option>
-            <option value="coats">Coats</option>
-            <option value="favorite">Favorite</option>
-            <option value="hoodies">Hoodies</option>
-          </select>
-          <Link to='/cart'><img src={carticon} className='w-[40px] h-[40px] mt-5' alt="" /></Link>
-        </div>
+         <div className='lg:hidden md:hidden flex gap-2'>
+             <select 
+               name="categories"
+               onChange={handleSelectChange}
+               className='w-[70px] h-[40px] mt-5 bg-[grey] text-white font-bold'>
+               <option value="">Select</option>
+               <option value="fashion">Fashion</option>
+               <option value="lifestyle">Lifestyle</option>
+               <option value="tees">Tees</option>
+               <option value="coats">Coats</option>
+               <option value="favorite">Favorite</option>
+               <option value="hoodies">Hoodies</option>
+             </select>
+             <Link to='/cart'><img src={carticon} className='w-[40px] h-[40px] mt-5' alt="" /></Link>
+             <Link to='/signup'><button className='w-[80px]  mt-5 text-white h-[40px] rounded-md bg-black'>SIGN UP</button></Link>
+             </div>
       </nav>
       {/* Second Container */}
       <div className='bg-[#ebeaea] h-[620px] w-full flex rounded-md'>
