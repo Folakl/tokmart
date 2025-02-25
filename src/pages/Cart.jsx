@@ -45,7 +45,7 @@ const Cart = () => {
                          </div>
                          </div>
 
-                         <h3> End of cart, <span className='flex justify-end text-[blue]' >Back to top</span></h3>
+                         
                          
                     </div>
                 ))
@@ -53,6 +53,7 @@ const Cart = () => {
 
            
         </div>
+       
         
     </div>
     );
