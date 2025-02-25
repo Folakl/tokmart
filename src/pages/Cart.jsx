@@ -27,9 +27,9 @@ const Cart = () => {
                 cart.map((item) => (
                     <div key={item.id}>
                         <img src={item.img} alt={item.Name} className=' lg:w-[300px] lg:h-[300px] md:w-[300px] md:h-[300px] w-[250px] h-[200px] rounded-md ' />
-                        <h3 className='text-[30px]'>{item.Name}</h3>
+                        <h3 className='lg:text-[30px] md:text-[30px] text-[20px]'>{item.Name}</h3>
                         <div className='flex '>
-                        <h3 className='text-[30px]'>price: <span className='font-bold'>${item.price}</span></h3>
+                        <h3 className='text-[20px]'>price: <span className='font-bold'>${item.price}</span></h3>
                         <img src={deleteicon}   onClick={() => removeFromCart(item.id)} alt="" className=' w-[50px] h-[50px]  ml-10 lg:ml-20 md:ml-10' /></div> 
                          <div >
                          <h3 className='text-[20px]'>Add more quantity: </h3>
