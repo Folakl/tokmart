@@ -9,7 +9,7 @@ const ShoppingCommunity = () => {
         <div className='flex justify-center'>
         <h3 className='bg-white lg:w-[400px] md:w-[400px] w-[350px] h-[60px] mt-5  mx-5 rounded-2xl flex'>
            <input type="email" className='text-black p-5' placeholder='Add your email here' />
-            <button className='bg-black w-[120px] h-[45px] my-2 justify-end   text-white'>SEND</button>
+            <button className='bg-black w-[110px] h-[45px] my-2 justify-end   text-white'>SEND</button>
         </h3>
         </div>
       

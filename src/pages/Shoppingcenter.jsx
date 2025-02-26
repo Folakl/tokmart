@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-import SecondNavbar from '../Components/SecondNavbar'
 import NewArrivals from '../Components/NewArrivals'
 import Payday from '../Components/Payday'
 import Youngfavourite from '../Components/Youngfavourite'
@@ -14,7 +13,6 @@ const Shoppingcenter = () => {
   return (
     <div>
      <Navbar/>
-    <SecondNavbar/>
     <h3 className='font-bold lg:text-[50px] md:text-[50px] text-[30px]  mx-10 mt-5'>NEW ARRIVALS</h3>
      <NewArrivals/> 
      <Payday/>    

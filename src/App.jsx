@@ -4,7 +4,7 @@ import ShoppingWebsite from './pages/ShoppingWebsite'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, BrowserRouter, useLocation } from 'react-router-dom';
 import ShoppingApp from './pages/ShoppingApp';
-import Hero from './pages/Hero';
+
 import Favourite from './pages/Favourite';
 import Shoppingcenter from './pages/Shoppingcenter';
 import Fashion from './pages/Fashion';
@@ -47,7 +47,7 @@ function App() {
   
       <Route path='/favorite' element={<ShoppingWebsite/>}/>
       <Route path='/shoppingapp' element={<ShoppingApp/>}/>
-      <Route path='/hero' element={<Hero/>}/>
+     
       <Route path='/' element={<Favourite/>}/>
       <Route path='/fashion' element={<Fashion/>}/>
       <Route path='/lifestyle' element={<Lifestyle/>}/>
