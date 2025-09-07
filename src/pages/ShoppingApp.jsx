@@ -11,7 +11,7 @@ const ShoppingApp = () => {
     <div>
       <Navbar/>
       <Payday/>
-      <h3 className='font-bold text-[30px] my-10 ml-20'>Young’s Favourite</h3>
+      <h3 className='font-bold text-[30px] my-10 ml-20'>Young’s  Favourite</h3>
       <Youngfavourite/>
       <Download/>
       <ShoppingCommunity/>

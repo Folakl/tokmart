@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Youngfavourite from '../Components/Youngfavourite'
 import Download from '../Components/Download'
 import Nave from '../Components/Nav';
@@ -8,7 +8,7 @@ const Favourite = () => {
   return (
     <div>
       <Nave/>
-   <h3 className='font-bold text-[30px] my-10 ml-20'>Young’s Favourite</h3>
+   <h3 className='font-bold text-[30px] mt-[60px] ml-20 '>Young’s Favourite</h3>
       
       <Youngfavourite/>
       <Download/>

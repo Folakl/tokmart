@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from '../Components/Navbar'
 import NewArrivals from '../Components/NewArrivals'
 import Payday from '../Components/Payday'
@@ -13,10 +12,10 @@ const Shoppingcenter = () => {
   return (
     <div>
      <Navbar/>
-    <h3 className='font-bold lg:text-[50px] md:text-[50px] text-[30px]  mx-10 mt-5'>NEW ARRIVALS</h3>
+    <h3 className='font-bold lg:text-[50px] md:text-[50px] text-[30px]  mx-10 mt-10'>NEW ARRIVALS</h3>
      <NewArrivals/> 
      <Payday/>    
-     <marquee behavior="" direction="right"><h3 className='font-bold text-[30px] my-10 ml-20'>Young’s Favourite</h3> </marquee>
+     <marquee  direction="right"><h3 className='font-bold text-[30px] my-10 ml-20'>Young’s Favourite</h3> </marquee>
      <Youngfavourite/>
      <Download/>
      <ShoppingCommunity/>

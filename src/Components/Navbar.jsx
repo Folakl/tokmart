@@ -1,4 +1,4 @@
-import React from 'react';
+
 import one from '../assets/cib_f-secure.png';
 import three from '../assets/LET’S EXPLORE UNIQUE CLOTHES..png';
 import four from '../assets/incendiary-fantastically-beautiful-girl-coat-eco-fur-moves-fun-picture-lovely-lady-pink-clothes-removebg-preview 1.png';
@@ -8,11 +8,13 @@ import fashionbg from '../assets/fashion.jpeg';
 import hoodiesbg from '../assets/Hoodies.jpeg';
 import teesbg from '../assets/Fashion E-Commerce App Design.jpeg';
 import coatsbg from '../assets/💗💗💗.jpeg';
-import carticon from '../assets/Shopping Cart 3D Icon ui png transparent background.jpeg';
+
+import { useState } from 'react';
 
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [isOpen,setIsopen] = useState(false)
 
   const backgroundImage = 
     location.pathname === "/lifestyle" ? lifestylebg
@@ -25,45 +27,71 @@ const Navbar = () => {
     : location.pathname === "/favorite" ? hoodiesbg
     : four;
 
-  const handleSelectChange = (event) => {
-    const selectedValue = event.target.value.toLowerCase();
-    if (selectedValue) {
-      navigate(`/${selectedValue}`);
-    }
-  };
+
+  const handleSignup =()=>[
+    navigate("/signup")
+  ]
+  const handleMenu =()=>[
+    setIsopen(!isOpen)
+  ]
 
   return (
-    <div className='bg-white rounded-md h-[630px] mb-20'>
+    <div className='bg-white rounded-md h-[630px] '>
       {/* Navbar section */}
-      <nav className='flex justify-between  bg-[grey] w-full px-2 '>
-        <div className='flex gap-2 mt-5'>
+      
+       
+       <div className='fixed  w-full top-0'>
+        <nav className='flex justify-between   bg-[grey] px-2'>
+        <div className='flex gap-2 mt-2'>
           <img src={one} alt="" className='w-[30px] h-[40px]' />
-          <h3 className='text-[20px] font-bold mt-3'>TOKMART</h3>
+          <h3 className='text-[30px] font-bold'>TokMart</h3>
         </div>
         <div className='flex-wrap gap-10 ml-2 font-bold lg:flex md:flex hidden'>
-          <Link to='/shoppingcenter'><h3 className='mt-5 cursor-pointer lg:animate-bounce md:animate-pulse'>HOMEPAGE</h3></Link>
+          <Link to='/shoppingcenter'><h3 className='mt-5 cursor-pointer '>HOMEPAGE</h3></Link>
           <Link to='/fashion'><h3 className='mt-5 cursor-pointer'>FASHION</h3></Link>
           <Link to='/favorite'><h3 className='mt-5 cursor-pointer'>FAVOURITE</h3></Link>
           <Link to='/lifestyle'><h3 className='mt-5 cursor-pointer'>LIFESTYLE</h3></Link>
-          <Link to='/signup'><button className='w-[120px] mt-3 text-white h-[40px] rounded-md bg-black'>SIGN UP</button></Link>
+         
         </div>
-         <div className='lg:hidden md:hidden flex gap-2'>
-             <select 
-               name="categories"
-               onChange={handleSelectChange}
-               className='w-[70px] h-[40px] mt-5 bg-[grey] text-white font-bold'>
-               <option value="">Select</option>
-               <option value="fashion">Fashion</option>
-               <option value="lifestyle">Lifestyle</option>
-               <option value="tees">Tees</option>
-               <option value="coats">Coats</option>
-               <option value="favorite">Favorite</option>
-               <option value="hoodies">Hoodies</option>
-             </select>
-             <Link to='/cart'><img src={carticon} className='w-[40px] h-[40px] mt-5' alt="" /></Link>
-             <Link to='/signup'><button className='w-[80px]  mt-5 text-white h-[40px] rounded-md bg-black'>SIGN UP</button></Link>
-             </div>
+       
+             <div className='lg:flex md:flex hidden gap-5'>
+            <Link to='/cart' className='mt-5'>
+            <ion-icon name="cart-sharp" size="large"></ion-icon> 
+          </Link>
+        
+          <button className='w-[120px] mt-3 py-2 text-white h-[40px] rounded-md bg-black cursor-pointer lg:grid md:grid hidden' onClick={handleSignup}>SIGN UP</button>
+         
+        </div>
+        
+          
+          <div className='lg:hidden md:hidden flex'>
+             <Link to='/cart' className='mt-5'>
+            <ion-icon name="cart-sharp" size="large"></ion-icon> 
+          </Link>
+            <div className='cursor-pointer mt-5 lg:hidden md:hidden grid' onClick={handleMenu} >
+           {isOpen ? (
+          <div ><ion-icon  name="close-outline" size="large" ></ion-icon></div>
+
+           ): (<div><ion-icon name="menu-outline" size="large" ></ion-icon></div>)}
+          </div>
+          </div>
+          
       </nav>
+           {isOpen && 
+        <div className='bg-[#312424] inset-0 grid  z-2 text-start w-full h-contain leading-normal p-3 text-white font-bold'>
+          <Link to="/Shoppingcenter">Homepage</Link>
+          <Link to="/fashion">Fashion</Link>
+          <Link to="/lifestyle">Lifestyles</Link>
+          <Link to="/tees">Tees</Link>
+          <Link to="/coats">Coats</Link>
+          <Link to="/favorite">Favorite</Link>
+          <Link to="/hoodies">Hoodies</Link>
+          <Link to='/signup'>
+            <button className='w-[120px] mt-2  text-white h-[40px] rounded-md bg-black'>SIGN UP</button>
+          </Link>
+           
+         </div>}
+       </div>
       {/* Second Container */}
       <div className='bg-[#ebeaea] h-[620px] w-full flex rounded-md'>
         <div className='p-20 w-[600px]'>
@@ -73,8 +101,8 @@ const Navbar = () => {
             <button className='bg-black text-white rounded-md h-[50px] w-[150px] animate-bounce'>SHOP NOW</button>
           </Link>
         </div>
-        <div className='lg:flex md:flex hidden justify-center items-center mx-[150px]'>
-          <img src={backgroundImage} alt="show me" className='h-[400px] w-[400px] rounded-full border-2 border-black' />
+        <div className='lg:grid md:grid hidden justify-center items-center lg:mx-[20px] md:mx-[20px] mx-0'>
+          <img src={backgroundImage} alt="show me" className='lg:h-[400px] lg:w-[400px] md:w-[300px] md:h-[300px] w-[300px] h-[300px] rounded-full border-2 border-black' />
         </div>
       </div>
     </div>

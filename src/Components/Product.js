@@ -58,8 +58,6 @@ import fiftyseven from '../assets/Womens Off The Shoulder Short Sleeve High Low 
 import fiftyeight from '../assets/Womens Y2K Cardigan Sweaters Long Sleeve Open Front Cropped Flower Knit Cardigan Aesthetic 90s Shrug Back to College Outfits (1).jpeg'
 import fiftynine  from  '../assets/Womens Y2K Cardigan Sweaters Long Sleeve Open Front Cropped Flower Knit Cardigan Aesthetic 90s Shrug Back to College Outfits (2).jpeg'
 import sixty from '../assets/01b844dc-2aee-4794-8a93-aea9d0014d31.jpeg'
-import ticked from '../assets/ticked ster.jpeg'
-import Untick from '../assets/ticked star.jpeg'
 
 
 const Products = [
@@ -273,15 +271,15 @@ const Products = [
                categories:"trends",
                Quantity: 1
               },
+                     {
+             id:31,
+             Name: "Spring dresses",
+             img: thirtyone,
+             price:80,
+             categories:"trends",
+             Quantity: 1
+            },
              {
-     id:31,
-     Name: "Spring dresses",
-     img: thirtyone,
-     price:80,
-     categories:"trends",
-     Quantity: 1
-    },
-     {
              id:11,
              Name: "Spring dresses",
              img: eleven,

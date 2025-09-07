@@ -1,12 +1,21 @@
-import React, { useContext, useState } from 'react';
+import  { useContext} from 'react';
 import { CartContext } from '../Components/CartContext';
 import { Link } from 'react-router-dom';
 import Nave from '../Components/Nav';
 import deleteicon from '../assets/Delete Icon.jpeg'
-
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+    const navigate = useNavigate();
     const { cart,  updateQuantity, removeFromCart  } = useContext(CartContext);
+
+    const handleCheckout=()=>{
+       navigate("/payment")
+        
+    }
+   const Total = cart.reduce((acc, item) => acc + item.price * item.Quantity, 0);
+
+        
    
 
     
@@ -27,7 +36,7 @@ const Cart = () => {
             ) : (
                 cart.map((item) => (
                     <div key={item.id}>
-                        <img src={item.img} alt={item.Name} className=' lg:w-[300px] lg:h-[300px] md:w-[300px] md:h-[300px] w-[250px] h-[200px] rounded-md ' />
+                        <img src={item.img} alt={item.Name} className=' lg:w-[250px] lg:h-[250px] md:w-[250px] md:h-[250px] w-[200px] h-[200px] rounded-md ' />
                         <h3 className='lg:text-[30px] md:text-[30px] text-[20px]'>{item.Name}</h3>
                         <div className='flex '>
                         <h3 className='text-[20px]'>price: <span className='font-bold'>${item.price}</span></h3>
@@ -46,16 +55,24 @@ const Cart = () => {
                          </div>
                          </div>
 
-                         
-                         
+                        
+          
                     </div>
                 ))
             )}
 
            
         </div>
+                {cart.length > 0 && (
+        <div className="mx-10 my-5 text-right font-bold text-[20px]">
+            Total: ${Total}
+          </div>
+            )}
        
-        
+          {cart.length === 0 ? (<div></div>):                <div  className=' mb-5 justify-self-end mx-10 '>
+          <button className='bg-[#2c1818] text-white w-[200px] h-[40px] font-bold ' onClick={handleCheckout}>Check Out</button>
+          
+         </div> }
     </div>
     );
 };

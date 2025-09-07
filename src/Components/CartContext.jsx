@@ -1,78 +1,4 @@
-// import { Children, createContext, useContext, useState } from "react";
-// import Products from "./Product";
-
-// const CartContext = createContext();
-
-// export const CartProvider = ({Children})=>{
-//     const [cart,SetCart] = useState([])
-
-//    const addToCart =()=>{
-//     SetCart((prevCart)=>{
-//         const existingItem = prevCart.find((item)=> item.id === Products.id)
-
-//           if(existingItem){
-//             return prevCart.map((item)=>
-//                 item.id === Products.id 
-//             );
-//           }
-//           else{
-//             return [...prevCart, {...Products, quantity:1}];
-//           }
-
-//     });
-    
-//    };
-//    return(
-//     <CartContext value ={{cart,SetCart, addToCart}}>
-//         {Children}
-//     </CartContext>
-// )
-
-// };
-
-// export const useCart = () => useContext(CartContext);
-
-
-
-// import { children, createContext, useState } from "react";
-// import Products from "./Product";
-
-// export const CartContext = createContext();
-
-// const CartProvider = ({children})=> {
-//     const [cart,SetCart] = useState([]);
-  
-// const addToCart = (product)=> {
-//     SetCart((prevCart)=>{
-//                 const existingItem = prevCart.find((item)=> item.id === Products.id)
-        
-//                   if(existingItem){
-//                     return prevCart.map((item)=>
-//                         item.id === Products.id 
-//                     );
-//                   }
-//                   else{
-//                     return [...prevCart, {...Products, quantity:1}];
-//                   }
-        
-//     }); 
-// };
-  
-// return (
-//     <CartContext.Provider value = {{cart, addToCart}}>
-//         {children}
-//     </CartContext.Provider> 
-// )
-
-
-//  }
-
-
-
-// export default CartProvider;
-
 import { createContext, useState } from "react";
-import Products from "./Product"; // Import Product list if needed
 
 export const CartContext = createContext();
 
@@ -104,7 +30,7 @@ const CartProvider = ({ children }) => {  // Fix: Lowercase "children"
     const updateQuantity = (productId, change) => {
         SetCart(prevCart => prevCart.map(item =>
             item.id === productId
-                ? { ...item, Quantity: Math.max(1, item.Quantity + change) } // Ensure quantity doesn't go below 1
+                ? { ...item, Quantity: Math.max(1, item.Quantity + change) } 
                 : item
         ));
     };

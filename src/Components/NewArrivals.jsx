@@ -1,4 +1,3 @@
-import React from 'react'
 import one from '../assets/Rectangle 20.png'
 import three from '../assets/Rectangle 22.png'
 import two from '../assets/Rectangle 21.png'
@@ -7,32 +6,14 @@ import { Link } from 'react-router-dom'
 
 
 const NewArrivals = () => {
- const product = [
-    {
-        id:1,
-        img:one,
-        text1:"Hoodies & Sweatshirt"
 
-    },
-    {
-        id:2,
-        img:two,
-        text1:"Coats & Parkas"
-     
-    },
-    {
-        id:3,
-        img:three,
-        text1:"Tees & T-Shirt"
-    }
- ]
 
   return (
     <div>
      
         <div className='mx-5 gap-5 grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 '>
             <div>
-                <img src={one} className='w-[350px] h-[400px] rounded-md' alt="" />
+                <img src={one} className='w-[300px] h-[300px] rounded-md' alt="" />
                 <h3 className='font-bold py-2'>Hoodies & Sweatshirt</h3>
                 <div className='flex'>
                     <h3 className=''>Explore now </h3>
@@ -40,7 +21,7 @@ const NewArrivals = () => {
                 </div>
             </div>
             <div>
-                <img src={two} className='w-[350px] h-[400px] rounded-md' alt="" />
+                <img src={two} className='w-[300px] h-[300px] rounded-md' alt="" />
                 <h3 className='font-bold py-2'>Coats & Parkas</h3>
                 <div className='flex'>
                     <h3 className=''>Explore now </h3>
@@ -48,7 +29,7 @@ const NewArrivals = () => {
                 </div>
             </div>
             <div>
-                <img src={three} className='w-[350px] h-[400px] rounded-md' alt="" />
+                <img src={three} className='w-[300px] h-[300px] rounded-md' alt="" />
                 <h3 className='font-bold py-2'>Tees & T-shirt</h3>
                 <div className='flex'>
                     <h3 className=''>Explore now </h3>

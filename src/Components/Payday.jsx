@@ -1,10 +1,9 @@
-import React from 'react'
 import one from '../assets/image 12.png'
 
 const Payday = () => {
   return (
     <div>
-      <div className='bg-[#fee973] grid lg:grid-cols-2 md:grid-cols-2  grid-cols-1  '>
+      <div className='bg-[#fee973] grid lg:grid-cols-2 md:grid-cols-2  grid-cols-1 lg:gap-0 md:gap-0 gap-5 '>
         <div>
           <img src={one} className='w-[650px] lg:h-[500px] md:h-[500px] h-[300px]' alt="" />
         </div>

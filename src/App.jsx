@@ -14,41 +14,22 @@ import Tees from './pages/Tees';
 import Coats from './pages/Coats';
 import Hoodies from './pages/Hoodies';
 import Cart from './pages/Cart';
-
+import Payment from './Components/Payment';
 
 
 
 
 function App() {
-//  const initialState ={
-//     count:0
-
-//  }
-
-//  switch (state = initialState , action) {
-//   case "INCREMENT":
-//   count : state -1
-    
-//     break;
- 
-//   default:
-//     break;
-//  }
 
   return (
     <>
             
   
      <BrowserRouter>
-   
-      
-      
       <Routes>
-  
+      <Route path='/' element={<Favourite/>}/>
       <Route path='/favorite' element={<ShoppingWebsite/>}/>
       <Route path='/shoppingapp' element={<ShoppingApp/>}/>
-     
-      <Route path='/' element={<Favourite/>}/>
       <Route path='/fashion' element={<Fashion/>}/>
       <Route path='/lifestyle' element={<Lifestyle/>}/>
       <Route path='/shoppingcenter' element={<Shoppingcenter/>}/>
@@ -57,11 +38,8 @@ function App() {
       <Route path='/hoodies' element={<Hoodies/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/cart' element={<Cart/>}/>
-     
-
+      <Route path='/payment' element={<Payment/>}/>
       </Routes>
-      
-     
       </BrowserRouter>
      
     </>
