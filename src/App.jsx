@@ -14,7 +14,7 @@ import Cart from './pages/Cart';
 import Payment from './Components/Payment';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import ProtectedRoute from './Components/protectedRoute';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
 
