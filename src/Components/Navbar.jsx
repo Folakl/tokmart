@@ -106,7 +106,7 @@ const Navbar = () => {
         </div>
 
         {/* Second Container */}
-        <div className="bg-[#ebeaea] h-[620px] w-full flex justify-between px-20 rounded-md">
+        <div className="bg-[#ebeaea] h-[620px] w-full flex  rounded-md">
           <div className="p-20 w-[600px]">
             <img src={three} alt="" className="w-[400px] h-[350px] my-5" />
             <h3 className="my-5 text-[20px]">
