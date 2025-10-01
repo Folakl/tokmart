@@ -52,13 +52,13 @@ const Cart = () => {
 
            
         </div>
-                {cart.length > 0 && (
+       {cart.length > 0 && (
         <div className="mx-10 my-5 text-right font-bold text-[20px]">
             Total: ${total}
           </div>
             )}
        
-          {cart.length === 0 ? (<div></div>):                <div  className=' mb-5 justify-self-end mx-10 '>
+          {cart.length === 0 ? (<div></div>): <div  className=' mb-5 justify-self-end mx-10 '>
           <button className='bg-[#2c1818] text-white w-[200px] h-[40px] font-bold ' onClick={handleCheckout}>Check Out</button>
           
          </div> }
