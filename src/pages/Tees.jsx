@@ -26,10 +26,10 @@ const Tees = () => {
             <h3 className='flex justify-center font-bold mt-20 text-[30px] bg-gradient-to-r from-blue-950 to-purple-400 text-transparent bg-clip-text'>
                 New <span className='bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text'>Trends</span>
             </h3>
-            <div className='grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mx-5 my-5 gap-5'>
+            <div className='flex flex-wrap justify-center mx-5 my-5 gap-5'>
                 {filterbyCategory.map(product => (
                     <div key={product.id}>
-                        <img src={product.img} alt="" className='rounded-2xl w-[200px] h-[200px] lg:w-[350px] lg:h-[300px] md:h-[300px] md:w-[350px]' />
+                        <img src={product.img} alt="" className='rounded-2xl w-[200px] h-[200px] lg:w-[220px] lg:h-[350px] md:h-[300px] md:w-[220px]' />
                         <h3 className='pt-5'>{product.Name}</h3>
                         <div>
                             <h3>Price: <span className='font-bold'>${product.price}</span></h3>
@@ -44,7 +44,7 @@ const Tees = () => {
                                  />
                              ))}
                                 </div>
-                                 <div className='flex lg:gap-[120px] md:gap-[60px] gap-5'>
+                                 <div className='flex lg:gap-[50px] md:gap-[50px] gap-5'>
                                   <button
                                        className='lg:w-[120px] md:w-[120px] w-[105px]  h-[30px] bg-[black] text-white rounded-2xl mt-2'
                                        onClick={() => addToCart(product)}

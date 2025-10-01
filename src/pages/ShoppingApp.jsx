@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Payday from '../Components/Payday'
 import Youngfavourite from '../Components/Youngfavourite'
 import Download from '../Components/Download'

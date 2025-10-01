@@ -88,7 +88,7 @@ const Products = [
           },
           {
            id:4,
-           Name: "orange coats and trouser",
+           Name: "Orange coats and trouser",
            img: four,
            price:80,
            categories:"catalogue",
@@ -96,7 +96,7 @@ const Products = [
           },
           {
            id:5,
-           Name: "slim gown and jean jacket",
+           Name: "Slim gown and jean jacket",
            img: five,
            price:80,
            categories:"catalogue",
@@ -120,7 +120,7 @@ const Products = [
           },
           {
            id:8,
-           Name: "Saish",
+           Name: "Tees and top",
            img: eight,
            price:10,
            categories:"catalogue",
@@ -128,15 +128,15 @@ const Products = [
           },
           {
            id:9,
-           Name: "Spring dresses",
+           Name: "full outfit dresses",
            img: nine,
-           price:80,
+           price:200,
            categories:"catalogue",
            Quantity: 1
           },
           {
            id:10,
-           Name: "Spring dresses",
+           Name: "Denim and top",
            img: ten,
            price:80,
            categories:"catalogue" ,
@@ -145,7 +145,7 @@ const Products = [
           
               {
                id:21,
-               Name: "Spring dresses",
+               Name: "spring dress",
                img: twentyone,
                price:80,
                categories:"lifestyle",
@@ -153,7 +153,7 @@ const Products = [
               },
               {
                id:22,
-               Name: "Spring dresses",
+               Name: "checkers ",
                img: twentytwo,
                price:80,
                categories:"lifestyle",
@@ -161,7 +161,7 @@ const Products = [
               },
               {
                id:23,
-               Name: "Spring dresses",
+               Name: "boss lady dress",
                img: twentythree,
                price:80,
                categories:"lifestyle",
@@ -417,7 +417,7 @@ const Products = [
     },
     {
      id:39,
-     Name: "Spring dresses",
+     Name: "white trouser and checked polo",
      img: thirtynine,
      price:80,
      categories:"tees",

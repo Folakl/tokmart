@@ -4,6 +4,7 @@ export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {  // Fix: Lowercase "children"
     const [cart, SetCart] = useState([]);
+    const [isloggedin,setIsloggedn] = useState(false)
 
     const addToCart = (product) => {
         SetCart((prevCart) => {
@@ -12,8 +13,9 @@ const CartProvider = ({ children }) => {  // Fix: Lowercase "children"
             if (existingItem) {
                 return prevCart.map((item) =>
                     item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-                   
+                  
                 )
+                
 
             } else {
                 return [...prevCart, { ...product, quantity: 1 }]
@@ -36,7 +38,7 @@ const CartProvider = ({ children }) => {  // Fix: Lowercase "children"
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart , removeFromCart, updateQuantity}}>
+        <CartContext.Provider value={{ cart, addToCart , removeFromCart, updateQuantity,isloggedin,setIsloggedn}}>
             {children}
         </CartContext.Provider>
     );

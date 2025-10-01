@@ -1,4 +1,3 @@
-import React from 'react'
 
 import NewArrivals from '../Components/NewArrivals'
 import Navbar from '../Components/Navbar'

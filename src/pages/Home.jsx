@@ -1,3 +1,4 @@
+
 import Navbar from '../Components/Navbar'
 import NewArrivals from '../Components/NewArrivals'
 import Payday from '../Components/Payday'
@@ -6,11 +7,10 @@ import Download from '../Components/Download'
 import Footertwo from  '../Components/Footertwo'
 import ShoppingCommunity from '../Components/ShoppingCommunity'
 
-
-
-const Shoppingcenter = () => {
+const Home  = () => {
   return (
-    <div>
+    
+     <div>
      <Navbar/>
     <h3 className='font-bold lg:text-[50px] md:text-[50px] text-[30px]  mx-10 mt-10'>NEW ARRIVALS</h3>
      <NewArrivals/> 
@@ -25,4 +25,4 @@ const Shoppingcenter = () => {
   )
 }
 
-export default Shoppingcenter
+export default Home

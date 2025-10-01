@@ -19,7 +19,7 @@ const Nave = () => {
          <h3 className='text-[30px] font-bold'>TokMart</h3>
         </div>
         <div className='flex-wrap gap-10 font-bold lg:flex md:flex hidden'>
-          <Link to='/shoppingcenter'><h3 className='mt-5 cursor-pointer'>HOMEPAGE</h3></Link>
+          <Link to='/home'><h3 className='mt-5 cursor-pointer'>HOMEPAGE</h3></Link>
           <Link to='/fashion'><h3 className='mt-5 cursor-pointer'>FASHION</h3></Link>
           <Link to='/favorite'><h3 className='mt-5 cursor-pointer'>FAVOURITE</h3></Link>
           <Link to='/lifestyle'><h3 className='mt-5 cursor-pointer'>LIFESTYLE</h3></Link>
@@ -52,7 +52,7 @@ const Nave = () => {
       </nav>
       {isOpen && 
         <div className='bg-[#312424] inset-0 grid  z-2 text-start w-full h-contain leading-normal p-3 text-white font-bold'>
-          <Link to="/Shoppingcenter">Homepage</Link>
+          <Link to="/home">Homepage</Link>
           <Link to="/fashion">Fashion</Link>
           <Link to="/lifestyle">Lifestyle</Link>
           <Link to="/tees">Tees</Link>
