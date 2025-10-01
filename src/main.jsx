@@ -3,11 +3,14 @@ import './index.css';
 import App from './App.jsx';
 import { StrictMode } from 'react';
 import CartProvider from './Components/CartContext.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
+        <BrowserRouter>
         <CartProvider >
             <App />
         </CartProvider>
+        </BrowserRouter>
     </StrictMode>
 );

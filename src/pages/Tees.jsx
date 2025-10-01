@@ -1,4 +1,4 @@
-import Nave from '../Components/Nav';
+import Nav from '../Components/Nav';
 import { useContext } from 'react';
 import { CartContext } from '../Components/CartContext';
 import Products from '../Components/Product'; // Fix: Import Products list
@@ -22,7 +22,7 @@ const Tees = () => {
       
     return (
         <div>
-            <Nave />
+            <Nav />
             <h3 className='flex justify-center font-bold mt-20 text-[30px] bg-gradient-to-r from-blue-950 to-purple-400 text-transparent bg-clip-text'>
                 New <span className='bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text'>Trends</span>
             </h3>
@@ -30,7 +30,7 @@ const Tees = () => {
                 {filterbyCategory.map(product => (
                     <div key={product.id}>
                         <img src={product.img} alt="" className='rounded-2xl w-[200px] h-[200px] lg:w-[220px] lg:h-[350px] md:h-[300px] md:w-[220px]' />
-                        <h3 className='pt-5'>{product.Name}</h3>
+                        <h3 className='pt-5 text-[20px]'>{product.Name}</h3>
                         <div>
                             <h3>Price: <span className='font-bold'>${product.price}</span></h3>
                             <div className='flex'>

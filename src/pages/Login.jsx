@@ -8,7 +8,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [showpassword, setShowpaasword] = useState(false);
   const [loading,setLoading] = useState(false)
-  const {isloggedin,setIsloggein} =useContext(CartContext)
+  const {setIsloggedin,setUser} =useContext(CartContext);
+  
   const navigate = useNavigate();
 
   const handleShowpassword = () => {
@@ -25,7 +26,8 @@ const Login = () => {
       if (error) throw error;
       console.log("login successful", data);
       alert("login sucessfull")
-      setIsloggein(true)
+      setIsloggedin(true)
+      setUser(data.user)
       navigate("/");
     } catch (error) {
       console.error("error:", error.message);
@@ -38,6 +40,7 @@ const Login = () => {
 
   return (
     <div className="w-full bg-[#43433c] h-screen fixed p-10">
+
       <h3 className="text-[30px] text-white text-center font-bold pb-5">
         Welcome Back
       </h3>

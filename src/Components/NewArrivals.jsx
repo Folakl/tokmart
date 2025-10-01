@@ -22,7 +22,7 @@ const NewArrivals = () => {
     },
     {
         id:3,
-        name:"Coats & Parkass",
+        name:"Tees & Denim",
         img:three,
         link: '/tees'
     }

@@ -1,4 +1,4 @@
-import Nave from '../Components/Nav';
+import Nav from '../Components/Nav';
 import { useContext } from 'react';
 import { CartContext } from '../Components/CartContext';
 import Products from '../Components/Product'; // Fix: Import Products list
@@ -24,7 +24,7 @@ const Hoodies = () => {
 
     return (
         <div>
-            <Nave />
+            <Nav />
             <h3 className='flex justify-center font-bold text-[30px] mt-20 bg-gradient-to-r from-blue-950 to-purple-400 text-transparent bg-clip-text'>
                 New <span className='bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text'>Trends</span>
             </h3>
@@ -32,7 +32,7 @@ const Hoodies = () => {
                 {filterbyCategory.map(product => (
                     <div key={product.id}>
                         <img src={product.img} alt="" className='rounded-2xl w-[200px] h-[200px] lg:w-[220px] lg:h-[350px] md:h-[350px] md:w-[220px]' />
-                        <h3 className='pt-5 '>{product.Name}</h3>
+                        <h3 className='pt-5 text-[20px] '>{product.Name}</h3>
                         <div >
                             <h3>Price: <span className='font-bold'>${product.price}</span></h3>
                         <div className='flex'>
@@ -49,11 +49,9 @@ const Hoodies = () => {
 
                              <div className='flex lg:gap-[50px] md:gap-[50px] gap-5'>
                               <button
-                                   className='lg:w-[120px] md:w-[120px] w-[105px]  h-[30px] `` text-white rounded-2xl mt-2'
+                                   className='lg:w-[120px] md:w-[120px] w-[105px]  h-[30px] bg-black text-white rounded-2xl mt-2'
                                    onClick={()=>{addToCart(product)}}
-                               >{
-
-                               }</button>
+                               >Add to cart</button>
                              <Link to='/cart'>  <ion-icon name="cart-sharp" size="large"></ion-icon> </Link>
                               </div>
                         </div>

@@ -34,9 +34,12 @@ const Navbar = () => {
   const handleMenu = () => {
     setIsopen(!isOpen);
   };
+  const handleShop=()=>{
+    navigate("/signup")
+  }
 
   return (
-    isloggedin && (
+    
       <div className="bg-white rounded-md h-[630px]">
         {/* Navbar section */}
         <div className="fixed w-full top-0">
@@ -59,7 +62,7 @@ const Navbar = () => {
                 <ion-icon name="cart-sharp" size="large"></ion-icon>
               </Link>
               <button
-                className="w-[120px] mt-3 py-2 text-white h-[40px] rounded-md bg-black cursor-pointer"
+                className="w-[120px] mt-3 py-2 text-white h-[38px] rounded-md bg-black cursor-pointer"
                 onClick={handleSignup}
               >
                 SIGN UP
@@ -103,30 +106,30 @@ const Navbar = () => {
         </div>
 
         {/* Second Container */}
-        <div className="bg-[#ebeaea] h-[620px] w-full flex rounded-md">
+        <div className="bg-[#ebeaea] h-[620px] w-full flex justify-between px-20 rounded-md">
           <div className="p-20 w-[600px]">
             <img src={three} alt="" className="w-[400px] h-[350px] my-5" />
             <h3 className="my-5 text-[20px]">
               Live for Influential and Innovative fashion!
             </h3>
             <Link to="/shoppingcenter">
-              <button className="bg-black text-white rounded-md h-[50px] w-[150px] animate-bounce">
+              <button className="bg-black text-white rounded-md h-[50px] w-[150px] animate-bounce" onClick={handleShop}>
                 SHOP NOW
               </button>
             </Link>
           </div>
 
-          <div className="lg:grid md:grid hidden justify-center items-center lg:mx-[20px] md:mx-[20px] mx-0">
+          <div className="lg:grid md:grid hidden items-center lg:mr-[220px] md:mx-[20px] mx-0 ">
             <img
               src={backgroundImage}
               alt="show me"
-              className="lg:h-[400px] lg:w-[400px] md:w-[300px] md:h-[300px] w-[300px] h-[300px] rounded-full border-2 border-black"
+              className="lg:h-[400px] lg:w-[400px] md:w-[300px] md:h-[300px] w-[300px] h-[300px] rounded-full "
             />
           </div>
         </div>
       </div>
     )
-  );
+ 
 };
 
 export default Navbar;

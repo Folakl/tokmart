@@ -1,4 +1,4 @@
-    import Nave from '../Components/Nav';
+    import Nav from '../Components/Nav';
     import { useContext } from 'react';
     import { CartContext } from '../Components/CartContext';
     import Products from '../Components/Product'; // Fix: Import Products list
@@ -21,7 +21,7 @@
 
         return (
             <div>
-                <Nave />
+                <Nav />
                 <h3 className='flex justify-center mt-[80px] font-bold text-[30px] bg-gradient-to-r from-blue-950 to-purple-400 text-transparent bg-clip-text'>
                     New <span className='bg-gradient-to-r from-red-400 to-purple-400 text-transparent bg-clip-text'>Trends</span>
                 </h3>

@@ -1,9 +1,12 @@
-import  { useState } from 'react'
+import  { useState,useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import one from '../assets/cib_f-secure.png'
-const Nave = () => {
-  const navigate = useNavigate(); // Moved useNavigate to the top level
+import { CartContext } from './CartContext'
+const Nav = () => {
+  const navigate = useNavigate(); // Moved use
+  // Navigate to the top level
   const [isOpen, setIsopen] = useState(false)
+  const {isloggedin} = useContext(CartContext)
  const handleSignup =()=>{
    navigate("/signup")
  }
@@ -12,7 +15,8 @@ const Nave = () => {
   }
 
   return (
-    <div className='fixed  w-full top-0   '>
+
+      <div className='fixed  w-full top-0   '>
       <nav className='flex justify-between bg-[grey]  text-[[#312424] w-full px-3 '>
         <div className='flex gap-2 m-2'>
           <img src={one} alt="" className='w-[30px] h-[40px]' />
@@ -30,7 +34,7 @@ const Nave = () => {
             <ion-icon name="cart-sharp" size="large"></ion-icon> 
           </Link>
         
-          <button className='w-[120px] mt-3 py-2 text-white h-[40px] rounded-md bg-black cursor-pointer lg:grid md:grid hidden' onClick={handleSignup}>SIGN UP</button>
+          <button className='w-[120px] mt-3 py-2 text-white h-[38px] rounded-md bg-black cursor-pointer lg:grid md:grid hidden' onClick={handleSignup}>SIGN UP</button>
          
         </div>
         
@@ -65,7 +69,8 @@ const Nave = () => {
            
          </div>}
     </div>
-  );
+    )
+ 
 }
 
-export default Nave;
+export default Nav;

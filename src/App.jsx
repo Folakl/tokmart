@@ -1,6 +1,6 @@
 import ShoppingWebsite from './pages/ShoppingWebsite'
 import './App.css'
-import { BrowserRouter as Router,  Routes, Route, BrowserRouter} from 'react-router-dom';
+import {  Routes, Route, } from 'react-router-dom';
 import ShoppingApp from './pages/ShoppingApp';
 
 import Favourite from './pages/Favourite';
@@ -14,7 +14,7 @@ import Cart from './pages/Cart';
 import Payment from './Components/Payment';
 import Login from './pages/Login';
 import Home from './pages/Home';
-
+import ProtectedRoute from './Components/protectedRoute';
 
 function App() {
 
@@ -22,25 +22,32 @@ function App() {
     <>
             
 
-     <BrowserRouter>
+     
 
   
       <Routes>
-      <Route path='/' element={<Favourite/>}/>
-      <Route path='/favorite' element={<ShoppingWebsite/>}/>
-      <Route path='/shoppingapp' element={<ShoppingApp/>}/>
-      <Route path='/fashion' element={<Fashion/>}/>
-      <Route path='/lifestyle' element={<Lifestyle/>}/>
-      <Route path='/home' element={<Home/>}/>
-      <Route path='/tees' element={<Tees/>}/>
-      <Route path='/coats' element={<Coats/>}/>
-      <Route path='/hoodies' element={<Hoodies/>}/>
-      <Route path='/signup' element={<Signup/>}/>
-      <Route path='/cart' element={<Cart/>}/>
-      <Route path='/payment' element={<Payment/>}/>
-      <Route path='/login' element={<Login/>}/>
-      </Routes>
-      </BrowserRouter>
+      {/* Public Routes */}
+      <Route path="/" element={<ShoppingWebsite />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+     
+
+      {/* ✅ All Protected Routes here */}
+      <Route element={<ProtectedRoute />}>
+        <Route path="/shoppingapp" element={<ShoppingApp />} />
+        <Route path="/fashion" element={<Fashion />} />
+        <Route path="/lifestyle" element={<Lifestyle />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/tees" element={<Tees />} />
+        <Route path="/coats" element={<Coats />} />
+        <Route path="/hoodies" element={<Hoodies />} />
+        <Route path="/cart" element={<Cart />} />
+         <Route path="/payment" element={<Payment />} />
+        <Route path="/favorite" element={<Favourite />} />
+      </Route>
+    </Routes>
+          
+      
      
     </>
   )
