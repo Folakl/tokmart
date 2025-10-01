@@ -89,14 +89,14 @@ const Navbar = () => {
 
           {isOpen && (
             <div className="bg-[#312424] inset-0 grid z-20 text-start w-full p-3 text-white font-bold">
-              <Link to="/home"><h3 className="mt-5 cursor-pointer">HOMEPAGE</h3></Link>
-              <Link to="/fashion">Fashion</Link>
-              <Link to="/lifestyle">Lifestyles</Link>
-              <Link to="/tees">Tees</Link>
-              <Link to="/coats">Coats</Link>
-              <Link to="/favorite">Favorite</Link>
-              <Link to="/hoodies">Hoodies</Link>
-              <Link to="/signup">
+              <Link to="/home"><h3 className="mt-5 cursor-pointer">Home</h3></Link>
+              <Link to="/tees" className='py-1'>Tees</Link>
+              <Link to="/coats" className='py-1'>Coats</Link>
+              <Link to="/fashion" className='py-1'>Fashion</Link>
+              <Link to="/favorite" className='py-1'>Favorite</Link>
+              <Link to="/hoodies" className='py-1'>Hoodies</Link>
+              <Link to="/lifestyle" className='py-1'>Lifestyles</Link>
+              <Link to="/signup" className='py-1'>
                 <button className="w-[120px] mt-2 text-white h-[40px] rounded-md bg-black">
                   SIGN UP
                 </button>

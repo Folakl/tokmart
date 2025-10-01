@@ -72,8 +72,8 @@ const Signup = () => {
       
    <div className="relative border-black  w-[250px] border-2 rounded-md">
             {
-              showPassword? (<input type={showPassword? "text": "password"}onChange={(e)=>{setPassword(e.target.value)}} value={password} className="  h-[50px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>):
-              <input type="password" onChange={(e)=>{setPassword(e.target.value)}} value={password} className="   h-[50px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>
+              showPassword? (<input type={showPassword? "text": "password"}onChange={(e)=>{setPassword(e.target.value)}} value={password} className=" w-[220px] h-[45px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>):
+              <input type="password" onChange={(e)=>{setPassword(e.target.value)}} value={password} className="   h-[45px] w-[220px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>
             }
             <ion-icon name={showPassword? "eye-outline" : "eye-off-outline"}  className="absolute top-3 left-[220px] cursor-pointer"  onClick={handleShowPassword}></ion-icon>
           </div>

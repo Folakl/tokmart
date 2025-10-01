@@ -61,8 +61,8 @@ const Login = () => {
           <h3 className="mt-3 font-bold">Password</h3>
             <div className="relative border-black  w-[250px] border-2 rounded-md">
             {
-              showpassword? (<input type={showpassword? "text": "password"}onChange={(e)=>{setPassword(e.target.value)}} value={password} className="  h-[50px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>):
-              <input type="password" onChange={(e)=>{setPassword(e.target.value)}} value={password} className="   h-[50px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>
+              showpassword? (<input type={showpassword? "text": "password"}onChange={(e)=>{setPassword(e.target.value)}} value={password} className=" w-[220px]  h-[45px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>):
+              <input type="password" onChange={(e)=>{setPassword(e.target.value)}} value={password} className="  w-[220px]   h-[45px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>
             }
             
               
