@@ -3,7 +3,7 @@
 import Nav from '../Components/Nav';
 import { useContext } from 'react';
 import { CartContext } from '../Components/CartContext';
-import Products from '../Components/Product'; // Fix: Import Products list
+import Products from '../Components/Product'; 
 import { Link } from 'react-router-dom';
 import ticked from '../assets/ticked ster.jpeg'
 import unticked from '../assets/ticked star.jpeg'
