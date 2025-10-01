@@ -38,7 +38,7 @@ const Cart = () => {
                             <h3 className='font-semibold'>Qty:</h3>
                          <div className='flex lg:w-[120px] md:w-[120px] w-[100px] border-black border-2 rounded-md  gap-5'>
                          <button className='w-[40px]  h-full bg-[grey] font-bold'  onClick={() => updateQuantity(item.id, - 1)}>-</button>
-                          <h3 className='font-bold'>{item.Quantity}</h3>
+                          <h3 className='font-bold'>{item.quantity}</h3>
                          <button className='w-[40px]  h-full bg-[grey] font-bold'  onClick={() => updateQuantity(item.id, + 1)}>+</button>
                          </div> 
                          </div>

@@ -38,7 +38,7 @@ const CartProvider = ({ children }) => {
     );
   };
 
-  // ✅ recalculate total only when cart changes
+
   useEffect(() => {
     const u = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     setTotal(u);
