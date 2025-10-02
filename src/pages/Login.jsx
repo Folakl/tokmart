@@ -17,6 +17,10 @@ const Login = () => {
   };
 
   const handleSignin = async () => {
+      if (email === "" || password === ""){
+        alert("Enter missing credentials")
+        return
+      }
     setLoading(true)
     try {
       const { data, error } = await supabase.auth.signInWithPassword({

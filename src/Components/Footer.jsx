@@ -1,6 +1,5 @@
-import fbimg from '../assets/Group 12.png'
-import igimg from '../assets/Group 12.png'
-import ximg from '../assets/Group 11.png'
+
+import ximg from '../assets/Group 12.png'
 import inimg from '../assets/Group 11.png'
 
 const Footer = () => {
@@ -9,9 +8,8 @@ const Footer = () => {
           <div>
             <h3 className='font-bold py-5'>FASHION</h3> 
            <h3>Complete your style with awesome clothes from us.</h3>
-           <div className='flex  gap-2 mt-10'>
-            <img src={fbimg} alt=""  />
-            <img src={igimg} alt="" />
+           <div className='flex flex-wrap  gap-2 mt-10'>
+           
             <img src={ximg} alt="" />
             <img src={inimg} alt="" />
           

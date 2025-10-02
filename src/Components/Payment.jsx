@@ -10,7 +10,7 @@ const Payment = () => {
   const [expiryMonth, setExpiryMonth] = useState("");
   const [cvv, setCvv] = useState("");
 
-  // Save details into context (demo only, not secure for production)
+  
   const handleSaveDetails = () => {
     setDetails({
       payment,

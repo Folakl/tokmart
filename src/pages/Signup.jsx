@@ -16,6 +16,10 @@ const Signup = () => {
   };
 
   const handleSignup = async (e) => {
+    if (email === "" || password === "" || name === ""){
+        alert("Enter missing credentials")
+        return
+      }
     setLoading(true)
     e.preventDefault();
     try {
@@ -27,8 +31,9 @@ const Signup = () => {
         },
       });
 
-      if (error) throw error;
-
+       if (error) throw error;
+  
+      
       console.log("Signup successful:", data);
       alert("Signup successful! Check your email for verification.");
       navigate("/login");
@@ -70,7 +75,7 @@ const Signup = () => {
 
           <h3 className="mt-3 font-bold">Password</h3>
       
-   <div className="relative border-black  w-[250px] border-2 rounded-md">
+          <div className="relative border-black  w-[250px] border-2 rounded-md">
             {
               showPassword? (<input type={showPassword? "text": "password"}onChange={(e)=>{setPassword(e.target.value)}} value={password} className=" w-[220px] h-[45px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>):
               <input type="password" onChange={(e)=>{setPassword(e.target.value)}} value={password} className="   h-[45px] w-[220px] rounded-lg outline-none p-2 text-black" placeholder="Enter your Password"/>

@@ -1,15 +1,14 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { CartContext } from "../Components/CartContext";
 import { useNavigate } from "react-router-dom";
 import Nav from "../Components/Nav";
 import deleteicon from "../assets/Delete Icon.jpeg";
-import ticked from "../assets/ticked ster.jpeg";
-import unticked from "../assets/ticked star.jpeg";
-import { supabase } from "../supabaseClients";
+
+
 
 const Cart = () => {
   const navigate = useNavigate();
-  const { cart, SetCart, ratings, updateQuantity, removeFromCart, total, user } =
+  const { cart, updateQuantity, removeFromCart, total } =
     useContext(CartContext);
 
   const handleCheckout = () => {
@@ -17,24 +16,7 @@ const Cart = () => {
   };
 
   
-  useEffect(() => {
-    const fetchCart = async () => {
-      if (!user) return;
-      const { data, error } = await supabase
-        .from("carts")
-        .select("items,total")
-        .eq("user_id", user.id)
-        .maybeSingle();
 
-      if (error) {
-        console.error("Error fetching cart:", error.message);
-      } else if (data) {
-        SetCart(data.items || []); 
-      }
-    };
-
-    fetchCart();
-  }, [user, SetCart]);
 
   return (
     <div>
@@ -57,18 +39,6 @@ const Cart = () => {
                 className=" lg:w-[220px] lg:h-[350px] md:w-[250px] md:h-[250px] w-[200px] h-[200px] rounded-md "
               />
               <h3 className=" text-[20px]">{item.Name}</h3>
-
-              {/* Ratings UI */}
-              <div className="flex">
-                {[...Array(5)].map((_, index) => (
-                  <img
-                    key={index}
-                    src={index < (ratings[item.id] || 0) ? ticked : unticked}
-                    alt="star"
-                    className="w-[20px] h-[20px]"
-                  />
-                ))}
-              </div>
 
               <div className="flex ">
                 <h3 className="text-[20px]">
