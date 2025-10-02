@@ -1,114 +1,143 @@
-  import { createContext, useState, useEffect } from "react";
-  import { supabase } from "../supabaseClients";
+import { createContext, useState, useEffect } from "react";
+import { supabase } from "../supabaseClients";
 
-  export const CartContext = createContext();
+export const CartContext = createContext();
 
-  const CartProvider = ({ children }) => {
-    const [cart, SetCart] = useState([]);
-    const [isloggedin, setIsloggedin] = useState(false);
-    const [user, setUser] = useState(null); 
-    const [total, setTotal] = useState(0);
-    const [ratings,setRatings] = useState({});
-    const [details,setDetails]= useState({})
+const CartProvider = ({ children }) => {
+  const [cart, SetCart] = useState([]);
+  const [isloggedin, setIsloggedin] = useState(false);
+  const [user, setUser] = useState(null);
+  const [total, setTotal] = useState(0);
+  const [ratings, setRatings] = useState({});
+  const [details, setDetails] = useState({});
+  const [hasLoaded, setHasLoaded] = useState(false); // ✅ prevent overwriting
 
-    const addToCart = (product) => {
-      SetCart((prevCart) => {
-        const existingItem = prevCart.find((item) => item.id === product.id);
-
-        if (existingItem) {
-          return prevCart.map((item) =>
-            item.id === product.id
-              ? { ...item, quantity: item.quantity + 1 } 
-              : item
-          );
-        } else {
-          return [...prevCart, { ...product, quantity: 1 }];
-        }
-      });
-    };
-
-    const removeFromCart = (productId) => {
-      SetCart((prevCart) => prevCart.filter((item) => item.id !== productId));
-    };
-
-    const updateQuantity = (productId, change) => {
-      SetCart((prevCart) =>
-        prevCart.map((item) =>
-          item.id === productId
-            ? { ...item, quantity: Math.max(1, item.quantity + change) }
+  const addToCart = (product) => {
+    SetCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === product.id);
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
             : item
-        )
-      );
-    };
+        );
+      } else {
+        return [...prevCart, { ...product, quantity: 1 }];
+      }
+    });
+  };
+
+  const removeFromCart = (productId) => {
+    SetCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+  };
+
+  const updateQuantity = (productId, change) => {
+    SetCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === productId
+          ? { ...item, quantity: Math.max(1, item.quantity + change) }
+          : item
+      )
+    );
+  };
 
   const rateProduct = async (productId, rating) => {
     if (!user) return;
-
-   
     setRatings((prev) => ({ ...prev, [productId]: rating }));
 
-   
-    const { error } = await supabase.from("ratings").upsert([
-      {
-        user_id: user.id,
-        product_id: productId,
-        rating,
-      },
-    ],
-    { onConflict: ["user_id", "product_id"] } );
+    const { error } = await supabase.from("ratings").upsert(
+      [
+        {
+          user_id: user.id,
+          product_id: productId,
+          rating,
+        },
+      ],
+      { onConflict: ["user_id", "product_id"] }
+    );
 
     if (error) console.error("Error saving rating:", error.message);
   };
 
+  // recalc total whenever cart updates
+  useEffect(() => {
+    const u = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    setTotal(u);
+  }, [cart]);
 
-    useEffect(() => {
-      const u = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-      setTotal(u);
-    }, [cart]);
-      
+  // load cart once when user logs in
+  useEffect(() => {
+    const loadCart = async () => {
+      if (!user) return;
 
-    //  sync cart with supabase whenever it updates
-      
-         useEffect(()=>{
-          const syncCart = async()=>{
-            if(!user)return
+      const { data, error } = await supabase
+        .from("carts")
+        .select("items, total")
+        .eq("user_id", user.id)
+        .single();
 
+      if (error) {
+        console.error("Error loading cart:", error.message);
+        return;
+      }
 
-             const {error} = await supabase.from("carts").upsert([{
-              user_id: user.id,
-              items:cart,
-              total
-             }
-            ],   { onConflict: ["user_id"] }   )
-            if(error){
-              console.error("error syncing cart:",error.message);
-            }
-          }
-          syncCart();
-         }, [user,cart,total])
+      if (data) {
+        SetCart(data.items || []);
+        setTotal(data.total || 0);
+      }
+      setHasLoaded(true); // ✅ now safe to sync
+    };
 
+    loadCart();
+  }, [user]);
 
-    return (
-      <CartContext.Provider
-        value={{
-          cart,
-          addToCart,
-          removeFromCart,
-          updateQuantity,
-          isloggedin,
-          setIsloggedin,
-          user,
-          setUser,
-          total,
-          SetCart,
-          ratings,
-          rateProduct,
-          setDetails
-        }}
-      >
-        {children}
-      </CartContext.Provider>
-    );
-  };
+  // sync only after load finished
+  useEffect(() => {
+    const syncCart = async () => {
+      if (!user || !hasLoaded) return;
 
-  export default CartProvider;
+      const { error } = await supabase.from("carts").upsert(
+        [
+          {
+            user_id: user.id,
+            items: cart,
+            total,
+          },
+        ],
+        { onConflict: ["user_id"] }
+      );
+
+      if (error) {
+        console.error("Error syncing cart:", error.message);
+      }
+    };
+
+    syncCart();
+  }, [user, cart, total, hasLoaded]);
+
+  return (
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        isloggedin,
+        setIsloggedin,
+        user,
+        setUser,
+        total,
+        SetCart,
+        ratings,
+        rateProduct,
+        setDetails,
+        
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
+};
+
+export default CartProvider;
+
