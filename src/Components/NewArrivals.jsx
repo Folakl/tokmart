@@ -35,12 +35,12 @@ const NewArrivals = () => {
   return (
     <div>
      
-        <div className='mx-20  flex flex-wrap justify-between '>
+        <div className='mx-20  flex flex-wrap justify-between mt-5 '>
             {
                 Arrival.map((fave)=>(
                     <div key={fave.id}>
                          
-                <img src={fave.img} className='w-[300px] h-[300px] rounded-md' alt="" />
+                <img src={fave.img} className='w-[300px] lg:h-[400px] md:h-[400px] h-[300px] rounded-md' alt="" />
                 <h3 className='font-bold py-2'>{fave.name}</h3>
                 <div className='flex justify-between'>
                     <h3 className=''>Explore now </h3>

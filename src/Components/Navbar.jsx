@@ -51,7 +51,7 @@ const Navbar = () => {
 
             {/* Desktop menu */}
             <div className="flex-wrap gap-10 ml-2 font-bold lg:flex md:flex hidden">
-              <Link to="/home"><h3 className="mt-5 cursor-pointer">HOMEPAGE</h3></Link>
+              <Link to="/home"><h3 className="mt-5 cursor-pointer">HOME</h3></Link>
               <Link to="/fashion"><h3 className="mt-5 cursor-pointer">FASHION</h3></Link>
               <Link to="/favorite"><h3 className="mt-5 cursor-pointer">FAVOURITE</h3></Link>
               <Link to="/lifestyle"><h3 className="mt-5 cursor-pointer">LIFESTYLE</h3></Link>
@@ -61,12 +61,15 @@ const Navbar = () => {
               <Link to="/cart" className="mt-5">
                 <ion-icon name="cart-sharp" size="large"></ion-icon>
               </Link>
-              <button
-                className="w-[120px] mt-3 py-2 text-white h-[38px] rounded-md bg-black cursor-pointer"
-                onClick={handleSignup}
-              >
-                SIGN UP
-              </button>
+                {
+                isloggedin ? (<div ></div>): (
+                  <Link to="/signup" className='py-1'>
+                <button className="w-[120px] mt-2 text-white h-[40px] rounded-md bg-black" onClick={handleSignup}>
+                  SIGN UP
+                </button>
+              </Link>
+              )
+              }
             </div>
 
             {/* Mobile menu */}
@@ -96,11 +99,15 @@ const Navbar = () => {
               <Link to="/favorite" className='py-1'>Favorite</Link>
               <Link to="/hoodies" className='py-1'>Hoodies</Link>
               <Link to="/lifestyle" className='py-1'>Lifestyles</Link>
-              <Link to="/signup" className='py-1'>
+              {
+                isloggedin ? (<div className='pt-1'>hhr</div>): (
+                  <Link to="/signup" className='py-1'>
                 <button className="w-[120px] mt-2 text-white h-[40px] rounded-md bg-black">
                   SIGN UP
                 </button>
               </Link>
+              )
+              }
             </div>
           )}
         </div>

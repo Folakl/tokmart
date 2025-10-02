@@ -2,7 +2,7 @@
 import Youngfavourite from '../Components/Youngfavourite'
 import Download from '../Components/Download'
 import Nav from '../Components/Nav';
-import Footertwo from  '../Components/Footertwo'
+import Footer from '../Components/Footer';
 
 const Favourite = () => {
   return (
@@ -12,7 +12,7 @@ const Favourite = () => {
       
       <Youngfavourite/>
       <Download/>
-      <Footertwo/>
+      <Footer/>
     </div>
   )
 }

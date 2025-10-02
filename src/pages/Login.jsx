@@ -25,7 +25,7 @@ const Login = () => {
       });
       if (error) throw error;
       console.log("login successful", data);
-      alert("login sucessfull")
+      alert("login successful")
       setIsloggedin(true)
       setUser(data.user)
       navigate("/");
@@ -53,7 +53,7 @@ const Login = () => {
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-            className="border-2 shadow-md border-black w-[250px] h-[50px] rounded-lg outline-none p-2 text-black"
+            className="border-2 shadow-md border-black w-[250px] h-[45px] rounded-lg outline-none p-2 text-black"
             placeholder="Enter your Email Address"
           />
 

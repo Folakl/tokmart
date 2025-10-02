@@ -1,7 +1,7 @@
 
 import NewArrivals from '../Components/NewArrivals'
 import Navbar from '../Components/Navbar'
-import Footertwo from  '../Components/Footertwo'
+import Footer from '../Components/Footer'
 
 const ShoppingWebsite = () => {
   return (
@@ -9,9 +9,9 @@ const ShoppingWebsite = () => {
        <Navbar/>
         
        
-        <h3 className='font-bold text-[30px] mx-10 '>NEW ARRIVALS</h3>
+        <h3 className='font-bold text-[30px] pl-10 '>NEW ARRIVALS</h3>
         <NewArrivals/>
-        <Footertwo/>
+        <Footer/>
     </div>
   )
 }

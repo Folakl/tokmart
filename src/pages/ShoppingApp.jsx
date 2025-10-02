@@ -3,7 +3,7 @@ import Payday from '../Components/Payday'
 import Youngfavourite from '../Components/Youngfavourite'
 import Download from '../Components/Download'
 import ShoppingCommunity from '../Components/ShoppingCommunity'
-import Footertwo from  '../Components/Footertwo'
+import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 
 const ShoppingApp = () => {
@@ -15,7 +15,7 @@ const ShoppingApp = () => {
       <Youngfavourite/>
       <Download/>
       <ShoppingCommunity/>
-      <Footertwo/>
+      <Footer/>
     </div>
   )
 }

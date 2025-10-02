@@ -55,7 +55,7 @@ const Signup = () => {
             type="text"
             onChange={(e) => setName(e.target.value)}
             value={name}
-            className="border-2 shadow-md border-black w-[250px] h-[50px] rounded-lg outline-none p-2 text-black"
+            className="border-2 shadow-md border-black w-[250px] h-[45px] rounded-lg outline-none p-2 text-black"
             placeholder="Enter your Name"
           />
 

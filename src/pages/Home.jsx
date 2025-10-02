@@ -4,7 +4,7 @@ import NewArrivals from '../Components/NewArrivals'
 import Payday from '../Components/Payday'
 import Youngfavourite from '../Components/Youngfavourite'
 import Download from '../Components/Download'
-import Footertwo from  '../Components/Footertwo'
+import Footer from '../Components/Footer'
 import ShoppingCommunity from '../Components/ShoppingCommunity'
 
 const Home  = () => {
@@ -19,7 +19,7 @@ const Home  = () => {
      <Youngfavourite/>
      <Download/>
      <ShoppingCommunity/>
-     <Footertwo/>
+     <Footer/>
 
     </div>
   )

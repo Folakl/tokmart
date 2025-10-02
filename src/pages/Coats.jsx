@@ -8,21 +8,19 @@ import { Link } from 'react-router-dom';
 import ticked from '../assets/ticked ster.jpeg'
 import unticked from '../assets/ticked star.jpeg'
 import { useState } from 'react';
-import Footertwo from '../Components/Footertwo';
+import Footer from '../Components/Footer';
 
 const Coats = () => {
     const filterbyCategory = Products.filter(item => item.categories === "coats"); 
-    const { addToCart } = useContext(CartContext); 
-    const [ratings,setRatings] = useState([]);
+    // const { addToCart } = useContext(CartContext); 
+    const {ratings,rateProduct,addToCart} = useContext(CartContext)
+    const [added,setAdded] = useState(false)
 
-  function handleRating(productid,index){
-    setRatings(prevRatings => ({
-        ...prevRatings,
-        [productid]: index + 1 
-    }));
-  };
 
-    
+  function handleAdd(product) {
+    addToCart(product); // ✅ use context
+    setAdded(prev => ({ ...prev, [product.id]: true })); // ✅ mark added
+  }
 
     return (
         <div>
@@ -44,22 +42,22 @@ const Coats = () => {
                                     src={index < (ratings[product.id] ) ? ticked : unticked}
                                     alt="star"
                                     className='w-[20px] h-[20px] my-2 cursor-pointer'
-                                    onClick={() => handleRating(product.id, index)}
+                                    onClick={() => rateProduct(product.id, index+1)}
                                 />
                             ))}
                         </div>
                            <div className='flex lg:gap-[50px] md:gap-[50px] gap-5'>
                            <button
-                                className='lg:w-[120px] md:w-[120px] w-[105px]  h-[30px] bg-[black] text-white rounded-2xl mt-2'
-                                onClick={() => addToCart(product)}
-                            >Add to cart</button>
+                                className='lg:w-[120px] md:w-[120px] w-[105px]  h-[30px]  bg-black text-white rounded-2xl mt-2'
+                                onClick={()=>{handleAdd(product)}}
+                            >{added[product.id] ? "Added to cart" : "Add to cart"}</button>
                             <Link to='/cart'>  <ion-icon name="cart-sharp" size="large"></ion-icon> </Link>
                            </div>
                         </div>
                     </div>
                 ))}
             </div>
-            <Footertwo/>
+            <Footer/>
         </div>
     );
 };

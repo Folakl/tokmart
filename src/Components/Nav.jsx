@@ -3,8 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import one from '../assets/cib_f-secure.png'
 import { CartContext } from './CartContext'
 const Nav = () => {
-  const navigate = useNavigate(); // Moved use
-  // Navigate to the top level
+  const navigate = useNavigate(); 
   const [isOpen, setIsopen] = useState(false)
   const {isloggedin} = useContext(CartContext)
  const handleSignup =()=>{
@@ -23,7 +22,7 @@ const Nav = () => {
          <h3 className='text-[30px] font-bold'>TokMart</h3>
         </div>
         <div className='flex-wrap gap-10 font-bold lg:flex md:flex hidden'>
-          <Link to='/home'><h3 className='mt-5 cursor-pointer'>HOMEPAGE</h3></Link>
+          <Link to='/home'><h3 className='mt-5 cursor-pointer'>HOME</h3></Link>
           <Link to='/fashion'><h3 className='mt-5 cursor-pointer'>FASHION</h3></Link>
           <Link to='/favorite'><h3 className='mt-5 cursor-pointer'>FAVOURITE</h3></Link>
           <Link to='/lifestyle'><h3 className='mt-5 cursor-pointer'>LIFESTYLE</h3></Link>
@@ -34,7 +33,15 @@ const Nav = () => {
             <ion-icon name="cart-sharp" size="large"></ion-icon> 
           </Link>
         
-          <button className='w-[120px] mt-3 py-2 text-white h-[38px] rounded-md bg-black cursor-pointer lg:grid md:grid hidden' onClick={handleSignup}>SIGN UP</button>
+             {
+                isloggedin ? (<div ></div>): (
+                  <Link to="/signup" className='py-1'>
+                <button className="w-[120px] mt-2 text-white h-[40px] rounded-md bg-black" onClick={handleSignup}>
+                  SIGN UP
+                </button>
+              </Link>
+              )
+              }
          
         </div>
         
@@ -56,16 +63,22 @@ const Nav = () => {
       </nav>
       {isOpen && 
         <div className='bg-[#312424] inset-0 grid  z-2 text-start w-full h-contain leading-normal p-3 text-white font-bold'>
-          <Link to="/home">Homepage</Link>
-          <Link to="/fashion">Fashion</Link>
-          <Link to="/lifestyle">Lifestyle</Link>
-          <Link to="/tees">Tees</Link>
-          <Link to="/coats">Coats</Link>
-          <Link to="/favorite">Favorite</Link>
-          <Link to="/hoodies">Hoodies</Link>
-          <Link to='/signup'>
-            <button className='w-[120px] mt-2  text-white h-[40px] rounded-md bg-black'>SIGN UP</button>
-          </Link>
+          <Link className='py-1' to="/home">Home</Link>
+          <Link className='py-1' to="/fashion">Fashion</Link>
+          <Link className='py-1' to="/lifestyle">Lifestyle</Link>
+          <Link className='py-1' to="/tees">Tees</Link>
+          <Link className='py-1' to="/coats">Coats</Link>
+          <Link className='py-1' to="/favorite">Favorite</Link>
+          <Link className='py-1' to="/hoodies">Hoodies</Link>
+              {
+                isloggedin ? (<div className='pt-1'>hhr</div>): (
+                  <Link to="/signup" className='py-1'>
+                <button className="w-[120px] mt-2 text-white h-[40px] rounded-md bg-black">
+                  SIGN UP
+                </button>
+              </Link>
+              )
+              }
            
          </div>}
     </div>
