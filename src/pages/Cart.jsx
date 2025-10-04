@@ -48,7 +48,7 @@ const Cart = () => {
                   src={deleteicon}
                   onClick={() => removeFromCart(item.id)}
                   alt=""
-                  className=" lg:w-[50px] lg:h-[50px]  md:w-[50px] md:h-[50px] w-[40px] h-[40px] ml-5 lg:ml-20 md:ml-10"
+                  className=" lg:w-[50px] lg:h-[50px]  md:w-[50px] md:h-[50px] w-[40px] h-[40px] ml-5 lg:ml-20 md:ml-10 cursor-pointer" 
                 />
               </div>
 

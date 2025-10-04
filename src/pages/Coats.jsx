@@ -3,23 +3,24 @@
 import Nav from '../Components/Nav';
 import { useContext } from 'react';
 import { CartContext } from '../Components/CartContext';
-import Products from '../Components/Product'; 
+
 import { Link } from 'react-router-dom';
 import ticked from '../assets/ticked ster.jpeg'
 import unticked from '../assets/ticked star.jpeg'
 import { useState } from 'react';
 import Footer from '../Components/Footer';
+import Products from '../Components/Product';
+import { imageMap } from '../Components/Product';
 
 const Coats = () => {
     const filterbyCategory = Products.filter(item => item.categories === "coats"); 
-    // const { addToCart } = useContext(CartContext); 
     const {ratings,rateProduct,addToCart} = useContext(CartContext)
     const [added,setAdded] = useState(false)
 
 
   function handleAdd(product) {
-    addToCart(product); // ✅ use context
-    setAdded(prev => ({ ...prev, [product.id]: true })); // ✅ mark added
+    addToCart(product); 
+    setAdded(prev => ({ ...prev, [product.id]: true })); 
   }
 
     return (
@@ -31,7 +32,7 @@ const Coats = () => {
             <div className='flex flex-wrap justify-center my-5 gap-5'>
                 {filterbyCategory.map(product => (
                     <div key={product.id}>
-                        <img src={product.img} alt="" className=' rounded-2xl w-[200px] h-[200px] lg:w-[220px] lg:h-[350px] md:h-[350px] md:w-[220px] ' />
+                        <img src={imageMap[product.img]} alt="" className=' rounded-2xl w-[200px] h-[200px] lg:w-[220px] lg:h-[350px] md:h-[350px] md:w-[220px] ' />
                         <h3 className='pt-5  text-[20px]'>{product.Name}</h3>
                         <div >
                             <h3 className='text-[20px]'>Price: <span className='font-bold'>${product.price}</span></h3>

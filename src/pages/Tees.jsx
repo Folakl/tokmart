@@ -1,15 +1,16 @@
 import Nav from '../Components/Nav';
 import { useContext } from 'react';
 import { CartContext } from '../Components/CartContext';
-import Products from '../Components/Product'; // Fix: Import Products list
+import Products from '../Components/Product'; 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ticked from "../assets/ticked ster.jpeg"
 import unticked from "../assets/ticked star.jpeg"
 import Footer from '../Components/Footer';
+import { imageMap } from '../Components/Product';
 
 const Tees = () => {
-    const filterbyCategory = Products.filter(item => item.categories === "tees"); // Fix: Use `Products`, not `Product`
+    const filterbyCategory = Products.filter(item => item.categories === "tees"); 
       const { addToCart,ratings,rateProduct } = useContext(CartContext); 
   const [added,setAdded] = useState(false)
 
@@ -29,7 +30,7 @@ const Tees = () => {
             <div className='flex flex-wrap justify-center mx-5 my-5 gap-5'>
                 {filterbyCategory.map(product => (
                     <div key={product.id}>
-                        <img src={product.img} alt="" className='rounded-2xl w-[200px] h-[200px] lg:w-[220px] lg:h-[350px] md:h-[300px] md:w-[220px]' />
+                        <img src={imageMap[product.img]} alt="" className='rounded-2xl w-[200px] h-[200px] lg:w-[220px] lg:h-[350px] md:h-[300px] md:w-[220px]' />
                         <h3 className='pt-5 text-[20px]'>{product.Name}</h3>
                         <div>
                             <h3>Price: <span className='font-bold'>${product.price}</span></h3>

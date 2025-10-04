@@ -60,12 +60,75 @@ import fiftynine  from  '../assets/Womens Y2K Cardigan Sweaters Long Sleeve Open
 import sixty from '../assets/01b844dc-2aee-4794-8a93-aea9d0014d31.jpeg'
 
 
+
+export const imageMap ={
+   love,
+   two,
+   three,
+   four,
+   five,
+   six,
+   seven,
+   eight,
+   nine,
+   ten,
+   eleven,
+   twelve,
+   thirteen,
+   fourteen,
+   fifteen,
+   sixteen,
+   seventeen,
+   eighteen,
+   nineteen,
+   twenty,
+   twentyone,
+   twentytwo,
+   twentythree,
+   twentyfour,
+   twentyfive,
+   twentysix,
+   twentyseven,
+   twentyeight,
+   twentynine,
+   thirty,
+   thirtyone,
+   thirtytwo,
+   thirtythree,
+   thirtyfour,
+   thirtyfive,
+   thirtysix,
+   thirtyseven,
+   thirtyeight,
+   thirtynine,
+   fourty,
+   fourtyone,
+   fourtytwo,
+   fourtythree,
+   fourtyfour,
+   fourtyfive,
+   fourtysix,
+   fourtyseven,
+   fourtyeight,
+   fourtynine,
+   fifty,
+   fiftyone,
+   fiftytwo,
+   fiftythree,
+   fiftyfour,
+   fiftyfive,
+   fiftysix,
+   fiftyseven,
+   fiftyeight,
+   fiftynine,
+   sixty
+}
 const Products = [
   
      {
            id:1,
            Name: "wanted",
-           img: love,
+           img: 'love',
            price:800,
            categories:"catalogue",
            Quantity: 1
@@ -73,7 +136,7 @@ const Products = [
           {
            id:2,
            Name: "Body suit",
-           img: two,
+           img: "two",
            price:80,
            categories:"catalogue",
            Quantity: 1
@@ -81,7 +144,7 @@ const Products = [
           {
            id:3,
            Name: " Flowered Spring dresses",
-           img: three,
+           img: "three",
            price:80,
            categories:"catalogue",
            Quantity: 1 
@@ -89,7 +152,7 @@ const Products = [
           {
            id:4,
            Name: "Orange coats and trouser",
-           img: four,
+           img: "four",
            price:80,
            categories:"catalogue",
            Quantity: 1
@@ -97,7 +160,7 @@ const Products = [
           {
            id:5,
            Name: "Slim gown and jean jacket",
-           img: five,
+           img: 'five',
            price:80,
            categories:"catalogue",
            Quantity: 1
@@ -105,23 +168,23 @@ const Products = [
           {
            id:6,
            Name: "Shorts and tees",
-           img: six,
+           img: "six",
            price:90,
            categories:"catalogue",
            Quantity: 1
           },
           {
            id:7,
-           Name: "Hijabi fashion",
-           img: seven,
+           Name: "Tees and top",
+           img: "eight",
            price:25,
            categories:"catalogue",
            Quantity: 1
           },
           {
            id:8,
-           Name: "Tees and top",
-           img: eight,
+           Name: "Hijabi fashion",
+           img: "seven",
            price:10,
            categories:"catalogue",
            Quantity: 1
@@ -129,7 +192,7 @@ const Products = [
           {
            id:9,
            Name: "full outfit dresses",
-           img: nine,
+           img: "nine",
            price:200,
            categories:"catalogue",
            Quantity: 1
@@ -137,7 +200,7 @@ const Products = [
           {
            id:10,
            Name: "Denim and top",
-           img: ten,
+           img: "ten",
            price:80,
            categories:"catalogue" ,
            Quantity: 1
@@ -146,7 +209,7 @@ const Products = [
               {
                id:21,
                Name: "spring dress",
-               img: twentyone,
+               img: "twentyone",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -154,7 +217,7 @@ const Products = [
               {
                id:22,
                Name: "checkers ",
-               img: twentytwo,
+               img: "twentytwo",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -162,7 +225,7 @@ const Products = [
               {
                id:23,
                Name: "boss lady dress",
-               img: twentythree,
+               img: "twentythree",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -170,7 +233,7 @@ const Products = [
               {
                id:24,
                Name: "Spring dresses",
-               img: twentyfour,
+               img: "twentyfour",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -178,7 +241,7 @@ const Products = [
               {
                id:25,
                Name: "Spring dresses",
-               img: twentyfive,
+               img: "twentyfive",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -186,7 +249,7 @@ const Products = [
               {
                id:26,
                Name: "Spring dresses",
-               img: twentysix,
+               img: "twentysix",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -194,7 +257,7 @@ const Products = [
               {
                id:27,
                Name: "Spring dresses",
-               img: twentyseven,
+               img: "twentyseven",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -202,7 +265,7 @@ const Products = [
               {
                id:28,
                Name: "Spring dresses",
-               img: twentyeight,
+               img: "twentyeight",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -210,7 +273,7 @@ const Products = [
               {
                id:29,
                Name: "Spring dresses",
-               img: twentynine,
+               img: "twentynine",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -218,7 +281,7 @@ const Products = [
               {
                id:30,
                Name: "Spring dresses",
-               img: thirty,
+               img: "thirty",
                price:80,
                categories:"lifestyle",
                Quantity: 1
@@ -226,7 +289,7 @@ const Products = [
            {
                id:53,
                Name: "Spring dresses",
-               img: fiftythree,
+               img: "fiftythree",
                price:80,
                categories:"trends",
                Quantity: 1
@@ -234,7 +297,7 @@ const Products = [
               {
                id:54,
                Name: "Spring dresses",
-               img: fiftyfour,
+               img: "fiftyfour",
                price:80,
                categories:"trends",
                Quantity: 1
@@ -242,7 +305,7 @@ const Products = [
               {
                id:55,
                Name: "Spring dresses",
-               img: fiftyfive,
+               img: "fiftyfive",
                price:80,
                categories:"trends",
                Quantity: 1
@@ -250,7 +313,7 @@ const Products = [
               {
                id:56,
                Name: "Spring dresses",
-               img: fiftysix,
+               img: "fiftysix",
                price:80,
                categories:"trends",
                Quantity: 1
@@ -258,7 +321,7 @@ const Products = [
               {
                id:57,
                Name: "Spring dresses",
-               img: fiftyseven,
+               img: "fiftyseven",
                price:80,
                categories:"trends",
                Quantity: 1
@@ -266,7 +329,7 @@ const Products = [
               {
                id:58,
                Name: "Spring dresses",
-               img: fiftyeight,
+               img: "fiftyeight",
                price:80,
                categories:"trends",
                Quantity: 1
@@ -274,7 +337,7 @@ const Products = [
                      {
              id:31,
              Name: "Spring dresses",
-             img: thirtyone,
+             img: "thirtyone",
              price:80,
              categories:"trends",
              Quantity: 1
@@ -282,7 +345,7 @@ const Products = [
              {
              id:11,
              Name: "Spring dresses",
-             img: eleven,
+             img: "eleven",
              price:80,
              categories:"coats",
              Quantity: 1
@@ -290,7 +353,7 @@ const Products = [
             {
              id:12,
              Name: "Spring dresses",
-             img: twelve,
+             img: "twelve",
              price:80,
              categories:"coats",
              Quantity: 1
@@ -298,7 +361,7 @@ const Products = [
             {
              id:13,
              Name: "Spring dresses",
-             img: thirteen,
+             img: "thirteen",
              price:10,
              categories:"coats",
              Quantity: 1
@@ -306,7 +369,7 @@ const Products = [
             {
              id:14,
              Name: "Spring dresses",
-             img: fourteen,
+             img: "fourteen",
              price:70,
              categories:"tees",
              Quantity: 1
@@ -314,7 +377,7 @@ const Products = [
             {
              id:15,
              Name: "Spring dresses",
-             img: fifteen,
+             img: "fifteen",
              price:50,
              categories:"trends",
              Quantity: 1
@@ -322,7 +385,7 @@ const Products = [
             {
              id:16,
              Name: "Spring dresses",
-             img: sixteen,
+             img: "sixteen",
              price:10,
              categories:"trends",
              Quantity: 1
@@ -330,7 +393,7 @@ const Products = [
             {
              id:17,
              Name: "Spring dresses",
-             img: seventeen,
+             img: "seventeen",
              price:35,
              categories:"tees",
              Quantity: 1
@@ -338,7 +401,7 @@ const Products = [
             {
              id:18,
              Name: "Spring dresses",
-             img: eighteen,
+             img: "eighteen",
              price:80,
              categories:"trends",
              Quantity: 1
@@ -346,7 +409,7 @@ const Products = [
             {
              id:19,
              Name: "Spring dresses",
-             img: nineteen,
+             img: "nineteen",
              price:30,
              categories:"trends",
              Quantity: 1
@@ -354,7 +417,7 @@ const Products = [
             {
              id:20,
              Name: "Spring dresses",
-             img: twenty,
+             img: "twenty",
              price:50,
              categories:"tees",
              Quantity: 1
@@ -362,7 +425,7 @@ const Products = [
     {
      id:32,
      Name: "Spring dresses",
-     img: thirtytwo,
+     img:" thirtytwo",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -370,7 +433,7 @@ const Products = [
     {
      id:33,
      Name: "Spring dresses",
-     img: thirtythree,
+     img: "thirtythree",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -378,7 +441,7 @@ const Products = [
     {
      id:34,
      Name: "Spring dresses",
-     img: thirtyfour,
+     img: "thirtyfour",
      price:80,
      categories:"trends",
      Quantity: 1
@@ -386,7 +449,7 @@ const Products = [
     {
      id:35,
      Name: "Spring dresses",
-     img: thirtyfive,
+     img: "thirtyfive",
      price:80,
      categories:"trends",
      Quantity: 1
@@ -394,7 +457,7 @@ const Products = [
     {
      id:36,
      Name: "Spring dresses",
-     img: thirtysix,
+     img: "thirtysix",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -402,7 +465,7 @@ const Products = [
     {
      id:37,
      Name: "Spring dresses",
-     img: thirtyseven,
+     img: "thirtyseven",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -410,7 +473,7 @@ const Products = [
     {
      id:38,
      Name: "Spring dresses",
-     img: thirtyeight,
+     img: "thirtyeight",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -418,7 +481,7 @@ const Products = [
     {
      id:39,
      Name: "white trouser and checked polo",
-     img: thirtynine,
+     img: "thirtynine",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -426,7 +489,7 @@ const Products = [
     {
      id:40,
      Name: "Spring dresses",
-     img: fourty,
+     img: "fourty",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -434,7 +497,7 @@ const Products = [
     {
      id:41,
      Name: "Spring dresses",
-     img: fourtyone,
+     img: "fourtyone",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -442,7 +505,7 @@ const Products = [
     {
      id:42,
      Name: "Spring dresses",
-     img: fourtytwo,
+     img: "fourtytwo",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -450,7 +513,7 @@ const Products = [
     {
      id:43,
      Name: "Spring dresses",
-     img: fourtythree,
+     img: "fourtythree",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -458,7 +521,7 @@ const Products = [
     {
      id:44,
      Name: "Spring dresses",
-     img: fourtyfour,
+     img: "fourtyfour",
      price:80,
      categories:"tees",
      Quantity: 1
@@ -466,7 +529,7 @@ const Products = [
     {
      id:45,
      Name: "Spring dresses",
-     img: fourtyfive,
+     img: "fourtyfive",
      price:80,
      categories:"coats",
      Quantity: 1
@@ -474,7 +537,7 @@ const Products = [
     {
      id:46,
      Name: "Spring dresses",
-     img: fourtysix,
+     img: "fourtysix",
      price:80,
      categories:"coats",
      Quantity: 1
@@ -482,7 +545,7 @@ const Products = [
     {
      id:47,
      Name: "Spring dresses",
-     img: fourtyseven,
+     img: "fourtyseven",
      price:70,
      categories:"coats",
      Quantity: 1
@@ -490,7 +553,7 @@ const Products = [
     {
      id:48,
      Name: "Spring dresses",
-     img: fourtyeight,
+     img: "fourtyeight",
      price:20,
      categories:"coats",
      Quantity: 1
@@ -498,7 +561,7 @@ const Products = [
     {
      id:49,
      Name: "Spring dresses",
-     img: fourtynine,
+     img: "fourtynine",
      price:20,
      categories:"coats",
      Quantity: 1
@@ -506,7 +569,7 @@ const Products = [
     {
      id:50,
      Name: "Spring dresses",
-     img: fifty,
+     img: "fifty",
      price:34,
      categories:"coats",
      Quantity: 1
@@ -514,7 +577,7 @@ const Products = [
     {
      id:51,
      Name: "Spring dresses",
-     img: fiftyone,
+     img: "fiftyone",
      price:10,
      categories:"tees",
      Quantity: 1
@@ -522,7 +585,7 @@ const Products = [
     {
      id:52,
      Name: "Spring dresses",
-     img: fiftytwo,
+     img: "fiftytwo",
      price:30,
      categories:"tees",
      Quantity: 1
@@ -530,7 +593,7 @@ const Products = [
     {
      id:53,
      Name: "Spring dresses",
-     img: fiftythree,
+     img: "fiftythree",
      price:60,
      categories:"trends",
      Quantity: 1
@@ -538,7 +601,7 @@ const Products = [
     {
      id:54,
      Name: "Spring dresses",
-     img: fiftyfour,
+     img: "fiftyfour",
      price:40,
      categories:"catalogue",
      Quantity: 1
@@ -546,7 +609,7 @@ const Products = [
     {
      id:55,
      Name: "Spring dresses",
-     img: fiftyfive,
+     img: "fiftyfive",
      price:20,
      categories:"catalogue",
      Quantity: 1
@@ -554,7 +617,7 @@ const Products = [
     {
      id:56,
      Name: "Spring dresses",
-     img: fiftysix,
+     img: "fiftysix",
      price:55,
      categories:"catalogue",
      Quantity: 1
@@ -562,7 +625,7 @@ const Products = [
     {
      id:57,
      Name: "Spring dresses",
-     img: fiftyseven,
+     img: "fiftyseven",
      price:57,
      categories:"catalogue",
      Quantity: 1
@@ -570,7 +633,7 @@ const Products = [
     {
      id:58,
      Name: "Spring dresses",
-     img: fiftyeight,
+     img: "fiftyeight",
      price:10,
      categories:"coats",
      Quantity: 1
@@ -578,7 +641,7 @@ const Products = [
     {
      id:59,
      Name: "Spring dresses",
-     img: fiftynine,
+     img: "fiftynine",
      price:59,
      categories:"coats",
      Quantity: 1
@@ -586,10 +649,12 @@ const Products = [
     {
      id:60,
      Name: "Spring dresses",
-     img: sixty,
+     img:"sixty",
      price:80,
      categories:"coats",
      Quantity: 1
     }]
 
 export default Products
+
+

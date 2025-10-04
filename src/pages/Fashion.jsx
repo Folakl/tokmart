@@ -7,6 +7,7 @@
     import ticked from "../assets/ticked ster.jpeg"
     import unticked from "../assets/ticked star.jpeg"
     import Footer from '../Components/Footer';
+    import { imageMap } from '../Components/Product';
 
     const Fashion = () => {
         const filterbyCategory = Products.filter(item => item.categories === "catalogue"); 
@@ -28,7 +29,7 @@
                 <div className='flex flex-wrap  justify-center my-5 gap-5'>
                     {filterbyCategory.map(product => (
                         <div key={product.id}>
-                            <img src={product.img} alt="" className='rounded-2xl w-[200px] h-[2500px] lg:w-[220px] lg:h-[320px] md:h-[250px] md:w-[250px] ' />
+                            <img src={imageMap[product.img]} alt={product.Name} className='rounded-2xl w-[200px] h-[2500px] lg:w-[220px] lg:h-[320px] md:h-[250px] md:w-[250px] ' />
                             <h3 className='pt-5 text-[20px]'>{product.Name} </h3>
                             <div>
                                 <h3 className='text-[20px]'>Price: <span className='font-bold'>${product.price}</span></h3>
