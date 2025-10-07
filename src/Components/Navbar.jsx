@@ -34,7 +34,7 @@ const Navbar = () => {
   const handleMenu = () => {
     setIsopen(!isOpen);
   };
-  const handleShop=()=>{
+  const handleShop = () => {
     navigate("/signup")
   }
 
@@ -119,11 +119,9 @@ const Navbar = () => {
             <h3 className="my-5 text-[20px]">
               Live for Influential and Innovative fashion!
             </h3>
-            <Link to="/shoppingcenter">
               <button className="bg-black text-white rounded-md h-[50px] w-[150px] animate-bounce" onClick={handleShop}>
                 SHOP NOW
               </button>
-            </Link>
           </div>
 
           <div className="lg:grid md:grid hidden items-center lg:mr-[220px] md:mx-[20px] mx-0 ">

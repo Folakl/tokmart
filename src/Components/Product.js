@@ -425,7 +425,7 @@ const Products = [
     {
      id:32,
      Name: "Spring dresses",
-     img:" thirtytwo",
+     img:"thirtytwo",
      price:80,
      categories:"tees",
      Quantity: 1

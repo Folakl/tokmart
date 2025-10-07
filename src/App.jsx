@@ -30,7 +30,8 @@ function App() {
       <Route path="/" element={<ShoppingWebsite />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      
+        
+       
 
       {/* ✅ All Protected Routes here */}
       <Route element={<ProtectedRoute />}>
@@ -38,10 +39,10 @@ function App() {
         <Route path="/fashion" element={<Fashion />} />
         <Route path="/lifestyle" element={<Lifestyle />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/tees" element={<Tees />} />
         <Route path="/coats" element={<Coats />} />
         <Route path="/hoodies" element={<Hoodies />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/tees" element={<Tees />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/favorite" element={<Favourite />} />
       </Route>

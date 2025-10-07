@@ -51,10 +51,10 @@ const Signup = () => {
   };
 
   return (
-    <div className="w-full flex justify-center p-20 bg-[#43433c] h-screen fixed">
-      <div className="w-[400px] mx-10 py-5 h-fit bg-white rounded-2xl">
+    <div className="w-full flex justify-center lg:p-20 md:p-20 p-0 bg-[#43433c] h-screen fixed">
+      <div className="w-[400px] lg:mx-10 md:mx-10 mx-0 lg:py-5 md:py-5 py-20 lg:h-fit  md:h-fit h-screen bg-white ">
         <h3 className="mt-5 text-[30px] text-center font-extrabold">Signup</h3>
-        <div className="justify-self-center px-10">
+        <div className="justify-self-center px-10 ">
           <h3 className="mt-3 font-bold">Name</h3>
           <input
             type="text"
